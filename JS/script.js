@@ -14,3 +14,62 @@ window.addEventListener('scroll', ()=> {
     coral.style.top = value * -0.2 + 'px';
 
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+const horizontals = document.querySelectorAll('.section--horizontal');
+
+const setTranslateX = (element, progression) => {
+  if (progression > 1) {
+    progression = 1;
+  } else if (progression < 0) {
+    progression = 0;
+  }
+
+  const toMove = element.offsetWidth - window.innerWidth;
+  const transform = -1 * toMove * progression + 'px';
+  
+  element.style.transform = 'translateX(' + transform + ')';
+}
+
+window.addEventListener('scroll', () => {
+  horizontals.forEach(horizontal => {
+    const inner = horizontal.querySelector('.section__inner');
+
+    window.requestAnimationFrame(() => {
+      const toGo = horizontal.offsetHeight - window.innerHeight;
+
+      const position = window.scrollY - horizontal.offsetTop;
+      const progression = position / toGo;
+
+      if (progression > 0 && progression < 1) {
+        horizontal.classList.add('section--isFixed');
+      } else {
+        horizontal.classList.remove('section--isFixed');
+      }
+
+      if (progression >= 1) {
+        horizontal.classList.add('section--isScrolled');
+      } else {
+        horizontal.classList.remove('section--isScrolled');
+      }
+
+      setTranslateX(inner, progression);
+    });
+  });
+});

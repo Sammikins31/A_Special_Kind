@@ -1,182 +1,211 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    /* height: 100vh; */
- 
-}
-body{
-    background: linear-gradient(#270aff, #034b6a);
-    min-height: 100vh;
-    overflow-x: hidden;
-}
-header{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 30px 100px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 100;
-    height: 10vh;
-}
-
-img{
-    width: 50vw;
-}
-/* ==================== TITLE PAGE - DON'T TOUCH ! =============================== */
-.logo{
-    font-size: 2em;
-    pointer-events: none;
-}
-
-.navigation a {
-text-decoration: none;
-color: #359581;
-padding: 6px 15px;
-border-radius: 20px;
-margin: 0 10px;
-font-weight: 600;
-}
-
-.navigation a:hover, 
-.navigation a.active{
-    background: #359381;
-    color: #ffff;
-
-}
-
-.parallax1{
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    min-width: 100vw;
-    background-size: cover;
- }
-   
- 
-#logo-text{
-    position: absolute;
-    font-size: 5em;
-    font-family: 'Lilita One', sans-serif;
-    text-transform: uppercase;
-    color: #ffffff;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, .2);
-}
-
-.parallax1 img{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
- }
- 
- .parallax2{
-    display: flex;
-    position: relative;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    background-size: cover;
-    z-index: 2; /* Add this line */
   }
   
-
-.parallax2 img{
- position: absolute;
- left: 0;
- pointer-events: none;
- 
+  html {
+    overflow-x: hidden;
+  }
+  body {
+      background: linear-gradient(#270aff, #034b6a);
+      min-height: 100vh;
+      max-width: 100vw;
+      overflow-x: hidden;
+  }
+  header{
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      padding: 30px 100px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 100;
+      height: 10vh;
+  }
+  img{
+      width: 50vw;
+  }
+  /* ==================== TITLE PAGE - DON'T TOUCH ! =============================== */
+  .logo{
+      font-size: 2em;
+      pointer-events: none;
+  }
+  
+  .navigation a {
+  text-decoration: none;
+  color: #359581;
+  padding: 6px 15px;
+  border-radius: 20px;
+  margin: 0 10px;
+  font-weight: 600;
+  }
+  
+  .navigation a:hover, 
+  .navigation a.active{
+      background: #359381;
+      color: #ffff;
+  
+  }
+  
+  .parallax1{
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      min-width: 100vw;
+      background-size: cover;
+   }
+     
    
-}
-
-
- #btn{
-    text-decoration: none;
-    display: inline-block;
-    padding: 8px 30px;
-    border-radius: 40px;
-    background: #ffff;
-    color:#2b1055;
-    font-size: 1.5em;
-    z-index: 9;
-    transform: translateY(100px);
-}
-
-#bubbles{
-    height: 160vh;
-}
-
-.wave-left, .wave-right{
-    object-fit: cover;
-    width: 100%;
-    height: 100%;   
-    position: absolute; 
-}
-#rock-left{
-    transform: translate(0, 100vh);
-    height: 60%;
-    width:55%;
-    transform: scaleX(-1);
-    margin-top: 20%;
-    margin-left: -12%;
-}
-
-
-#coral{
-    position: absolute;
-    transform: translate(0, 22%);   
-}
-
-#wavy-wave{
-    position: absolute;
-    display: flex;
-    width: 100vw;
-    bottom: 87.2%;
-}
-
-/* #den{
-    position: absolute;
-    width: 55vw;
-    transform: translate(0, 8%);
-    transform: translate(0, 100vh);
-    height: 60%;
-    width:55%;
-    transform: scaleX(-1);
-    margin-top: 20%;
-    margin-left: -12%;
+  #logo-text{
+      position: absolute;
+      font-size: 5em;
+      font-family: 'Lilita One', sans-serif;
+      text-transform: uppercase;
+      color: #ffffff;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, .2);
+  }
   
-} */
+  .parallax1 img{
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+   }
+   
+   #btn{
+      text-decoration: none;
+      display: inline-block;
+      padding: 8px 30px;
+      border-radius: 40px;
+      background: #ffff;
+      color:#2b1055;
+      font-size: 1.5em;
+      z-index: 9;
+      transform: translateY(100px);
+   }
+   
+   #bubbles{
+      height: 160vh;
+   }
+   
+   .wave-left, .wave-right{
+      object-fit: cover;
+      width: 100%;
+      height: 100%;   
+      position: absolute; 
+   }
+   #rock-left{
+      transform: translate(0, 100vh);
+      height: 60%;
+      width:55%;
+      transform: scaleX(-1);
+      margin-top: 20%;
+      margin-left: -12%;
+   }
+   
+   
+   #coral{
+      position: absolute;
+      transform: translate(0, 22%);   
+   }
   
-
-.page1{
+  .section {
+    min-height: 100vh;
     position: relative;
-    /* display: flex; */
-    /* padding: 100px; */
-    background: linear-gradient(#032441, #1e96ca, #000000);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .section--horizontal {
+    height: 300vw;
+  }
+  
+  .section--horizontal .section__inner {
+    width: 300vw;
+    height: 100vh;
+    position: absolute;
     top: 0;
-    width: 100vw;
-    height:100vh;
-    /* min-height: 100vh; */
-    background-size: cover; 
-}
-
-.page2{
-    background: linear-gradient(#000000, #034b6a);
-}
-
-
-
-
-
-    
+    left: 0;
+  }
+  
+  .section--isFixed .section__inner {
+    position: fixed;
+  }
+  
+  .section--isScrolled .section__inner {
+    bottom: 0;
+    top: auto;
+  }
+  
+  .slides {
+    display: flex;
+  }
+  
+  .slides__slide {
+    flex-basis: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .title-page {
+      background: linear-gradient(#270aff, #034b6a);
+  }
+  
+  .red-200 {
+    background-color: #b6291f;
+  }
+  
+  .red-300 {
+    background-color: #861007;
+  }
+  
+  .orange-100 {
+    background-color: #f08344;
+  }
+  
+  .orange-200 {
+    background-color: #d8611d;
+  }
+  
+  .orange-300 {
+    background-color: #b44809;
+  }
+  
+  .blue-100 {
+    background-color: #016cd6;
+  }
+  
+  .blue-200 {
+    background-color: #014080;
+  }
+  
+  .blue-300 {
+    background-color: #001f3f;
+  }
+  
+  @media screen and (max-width: 600px) {
+      body {
+          font-size: 16px;
+      }
+   }
  
+
+
+
+
+
+
+ /* media */
  
 @media (max-width: 600px) {
     .wave-left, .wave-right{
@@ -190,3 +219,8 @@ font-weight: 600;
         font-size: 16px;
     }
  }
+
+
+
+
+ 
