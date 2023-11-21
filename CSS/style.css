@@ -59,8 +59,7 @@
       min-width: 100vw;
       background-size: cover;
    }
-     
-   
+  
   #logo-text{
       position: absolute;
       font-size: 5em;
@@ -90,9 +89,19 @@
       z-index: 9;
       transform: translateY(100px);
    }
-   
+   #btn2{
+      text-decoration: none;
+      display: inline-block;
+      padding: 8px 30px;
+      border-radius: 40px;
+      background: #ffff;
+      color:#2b1055;
+      font-size: 1.5em;
+      z-index: 9;
+      transform: translateY(100px);
+   }
    #bubbles{
-      height: 160vh;
+       height: 160vh;
    }
    
    .wave-left, .wave-right{
@@ -115,7 +124,83 @@
       position: absolute;
       transform: translate(0, 22%);   
    }
+  /* PAGE 1 */
   
+  
+  .page-1 {
+      position: relative; /* Add this line */
+      background-color: #023f00;
+      display: flex;
+      align-items: center;
+      height: 100vh;
+  
+     }
+     
+     .page-1 img {
+      position: absolute; /* Add this line */
+      bottom: 90%; /* Add this line */
+      width: 100%; /* Add this line */
+     }
+     
+     .wavy-wave{
+      position: absolute;
+      display: flex;
+      width: 100vw;
+      bottom: 87.2%;
+  }
+  .left-wave1{
+      position: absolute;
+      display: flex;
+      width: 100vw;
+      top: -1%;
+      
+  }
+  .right-wave1{
+      position: absolute;
+      display: flex;
+      width: 100vw;
+      top: -1%;
+      
+  }
+  
+     .parallax2 img{
+      position: absolute;
+      left: 0;
+      
+     }
+      .den {
+          position: relative;
+          bottom: 0;
+          top: 10.5rem;
+          display: flex;
+          width: 50rem;
+          transform: scaleX(-1);
+          margin-left: 50rem;
+       }
+       .den2 {
+        position: relative;
+        bottom: 0;
+        display: flex;
+        width: 50rem;
+     }
+       
+       .wyatt{
+          position: absolute;
+          display: flex;
+          margin-top: 16em;
+       }
+     
+       
+       
+       
+       
+  
+  
+  
+  
+  
+  
+  /* SECTION RULES */
   .section {
     min-height: 100vh;
     position: relative;
@@ -157,6 +242,7 @@
     justify-content: center;
   }
   
+  /* SLIDES PAGES */
   .title-page {
       background: linear-gradient(#270aff, #034b6a);
   }
@@ -180,47 +266,149 @@
   .orange-300 {
     background-color: #b44809;
   }
-  
+  /* PAGE 3 */
   .blue-100 {
-    background-color: #016cd6;
+    background-color: #d6a101;
   }
   
-  .blue-200 {
-    background-color: #014080;
+  /* PAGE 3 */
+  .page-3 {
+    background-color: #b34dae;
+    min-height: 100vh;
+    min-width: 100vw;
+  }
+  /* PAGE 1 */
+  .page-1 {
+    background: linear-gradient(#000000, #1271ff, #034b6a);
+  }
+  #page2{
+      background: linear-gradient(#000000, #1271ff, #034b6a);
   }
   
-  .blue-300 {
-    background-color: #001f3f;
+  
+  
+  .bubble_pg1{
+      
   }
   
-  @media screen and (max-width: 600px) {
-      body {
-          font-size: 16px;
-      }
+  .yellow_fish{
+      width: 16vw;
+      height: 30vh;
+  }
+  
+  .quote-container{
+      font-size: 18px;
+  }
+  .quote1 {
+      opacity: 0;
+      animation: fadeInOut 8s;
+      font-family: 'Josefin Sans', sans-serif;
+      margin-right: 20em;
+      margin-top: 16em;
+      margin-left: 3em;
+     }
+     
+     .quote2 {
+      opacity: 0;
+      animation: fadeInOut 8s;
+      animation-delay: 6s;
+      font-family: 'Josefin Sans', sans-serif;
+      margin-right: 25em;
+      margin-left: 4em;
+     }
+     
+     .quote3 {
+      opacity: 0;
+      animation: fadeInOut 8s;
+      animation-delay: 10s;
+      font-family: 'Josefin Sans', sans-serif;
+      margin-right: 25em;
+      margin-left: 5em;
+     }
+     .quote4{
+      opacity: 0;
+      animation: fadeInOut 8s;
+      animation-delay: 14.7s;
+      font-family: 'Josefin Sans', sans-serif;
+      margin-left: 25em;
+      margin-top: 5em;
+      transform: translate(0, -8em);
+     }
+     .quote5{
+      opacity: 0;
+      animation: fadeInOut 8s;
+      animation-delay: 19s;
+      font-family: 'Josefin Sans', sans-serif;
+      margin-left: 30em;
+      margin-bottom: 5em;
+      margin-top: 5em;
+      transform: translate(0, -12em);
+     }
+     .quote6{
+      opacity: 0;
+      animation: fadeIn 8s;
+      animation-delay: 24s;
+      font-family: 'Josefin Sans', sans-serif;
+      margin-left: 30em;
+      margin-bottom: 5em;
+      margin-top: 5em;
+      transform: translate(-1.0em, -18em);
+     }
+  
+     html {
+      scroll-behavior: smooth;
+     }
+     
+     #page2{
+      position: fixed;
+      width: 100vw;
+     }
+     .bully-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh; /* This will make the container take up the full height of the viewport */
+      text-align: center; /* This will center the text within each quote */
+     }
+     .bully-quote1, .bully-quote2, .bully-quote3 {
+      display: block;
    }
- 
-
-
-
-
-
-
- /* media */
- 
-@media (max-width: 600px) {
-    .wave-left, .wave-right{
-        width: 100%;
-        height: 50%;
-    }
- }
-
- @media screen and (max-width: 600px) {
-    body {
-        font-size: 16px;
-    }
- }
-
-
-
-
- 
+   .bully-quote1, .bully-quote2, .bully-quote3 {
+      display: inline-block;
+      margin-right: 20px; /* Add some space between the quotes */
+   }
+   .bully-container {
+      display: flex;
+      flex-direction: column; /* Stack the quotes vertically */
+   }
+     
+   @keyframes fadeIn {
+      0% {opacity: 0;}
+      100% {opacity: 1;}
+   }
+  
+  @keyframes fadeInOut {
+      0% { opacity: 0; }
+      50% { opacity: 1; }
+      100% { opacity: 0; }
+     }
+  
+     .indicator {
+      color:white;
+      text-align: center;
+      position: fixed;
+      bottom: 12rem;
+      left: 50%;
+      transform: translate3d(-50%, 0, 0);
+      font-size: 1.2rem;
+      
+      span {
+          display: block;
+          
+          &:nth-child(2) {
+              animation: arrowMove 600ms infinite alternate;
+          }
+      }
+  }
+  
+  

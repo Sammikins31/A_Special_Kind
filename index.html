@@ -1,58 +1,129 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="CSS/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
-    <script src="JS/script.js" defer></script> 
-<body>
-    
-    <header>
-        <h2 class="logo"> Logo </h2>
-        <nav class="navigation">
-            <a href="#" class="active">home</a>
-            <a href="#">about</a>
-            <a href="#">contact</a>
-        </nav>
-    </header>
-
-
-
-<!-- ==================== TITLE PAGE =================================== -->
-    <section class="parallax1">
-        <h2 id="logo-text">A Special Kind</h2>
-        <img src="images/bubblerr1.png" id="bubbles">
-        <!-- <img src="images/rock3.png" id="rock-right"> -->
-        <img src="images/rock3.png" id="rock-left">
-        <img src="images/wave-bkg1.png" id="wave-right">
-        <!-- <h2 id="text">Testing scroll</h2> -->
-        <a href="#" id="btn">Start Journey</a>
-        <img src="images/coral.png" id="coral">
-        <img src="images/wave-bkg2.png" id="wave-left">
-             
-
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>A SPECIAL KIND</title>
+        <!-- CSS -->
+        <link rel="stylesheet" href="css/style.css">
         
-         </div>
+        <!-- CUSTOM GOOGLE FONTS -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
+        <!-- JS -->
+        <script src="js/script.js" defer></script>
+    </head>
+    <body>
+         <!-- ==================== HEADER =================================== -->
+         <!-- Placed on top of webpage and it is unscrollable so it is visible on all pages for navigation -->
+        <header>
+            <h2 class="logo"> Logo </h2>
+            <nav class="navigation">
+                <a href="#" class="active">home</a>
+                <a href="#">about</a>
+                <a href="#">contact</a>
+            </nav>
+        </header>
+        
+        <!-- ==================== TITLE PAGE =================================== -->
+        <!-- Each page will be separated within sections -->
+       <section id="title-page">
+        <!-- To make a parallax section container for title page -->
+        <section class="parallax1">
+            <h2 id="logo-text">A Special Kind</h2>
+            <img src="images/bubblerr1.png" id="bubbles">
+            <img src="images/rock3.png" id="rock-left">
+            <img src="images/wave-bkg1.png" id="wave-right">
+            <!-- A button for user to click from the title page to go to next page without needing to scroll -->
+            <a href="#pg1" id="btn">Start Journey</a>
+            <!-- An indicator is a navigational symbol tool to instruct user on needing to scroll to go to next page without using much context -->
+            <div class="indicator">
+                <span>Scroll</span>
+                <span>↓</span>
+            </div>>
+            <!-- The bottom parallax images -->
+            <img src="images/coral.png" id="coral">
+            <img src="images/wave-bkg2.png" id="wave-left">
+            
+            <!-- End of parallax 1 section -->
     </section>
-    
+       </section>
+ 
+
+
+   
+ 
+
 <!-- ==================== PAGE 1 =================================== -->
-<section class="section section--horizontal">
-    <div class="section__inner">
-      <div class="slides">
-        <div class="slides__slide blue-300">Slide A</div>
-        <div id="slide-b" class="slides__slide blue-200">Slide B</div>
-        <div class="slides__slide blue-100">Slide C</div>
-      </div>
-    </div>
-  </section>
-  </section>
+<section id="pg1">
+    <section class="parallax2">
+        <!-- Creating a section within a section for horitzontal scroll -->
+        <section class="section section--horizontal">
+            <div class="section__inner">
+                <div class="slides">
+                    
+                    <!-- =============== HORIZONTAL SCROLL =================================== -->
+                    <div class="slides__slide page-1"> 
+                        <div class="quote-container">
+                            <h2 class="quote1"> There was a Wolf Eel Fish named Wyatt. </h2> 
+                            <h2 class="quote2"> He is a very shy fish </h2> 
+                            <h2 class="quote3"> Who is ashamed of his looks </h2> 
+                            <h2 class="quote4"> One day, a school of fish saw Wyatt</h2>
+                            <h2 class="quote5"> And BULLIED him</h2>
+                            <h2 class="quote6"> Scroll to continue...</h2>
+                        </div>
+                        <!-- <a href="#page2" id="btn2">Next</a> -->
+                       </div>
+                       
+                       <!-- <img src="images/bubb.png" class="bubble_pg1"> -->
+                       
+                       <!-- <img src="images/yellow-fish.png" class="yellow_fish"> -->
+                       <!-- <img src="images/wavy-wave.png" class="wavy-wave">  -->
+                       <img src="images/L1-wave.png" class="left-wave1">
+                       <!-- <img src="images/R1-wave.png" class="right-wave1"> -->
+                       <img src="images/den2.png" class="den">
+                       <img src="images/wyatt.png" class="wyatt">
+                       <div class="content">
+                        <section id="page2">
+                            <img src="images/den2.png" class="den2">
+                            <div class="bully-container">
+                                <h2 class="bully-quote1">'Oh my god! What is that ugly fish?</h2> 
+                                <h2 class="bully-quote2">'No wonder he is hiding! What a l o s e r!'</h2> 
+                                <h2 class="bully-quote3">'They're right...'</h2> 
+                                <h2 class="bully-quote4"> 'Don't listen to them Wyatt! They are just bullies!</h2>
+                            </div>
+                        </section>
+                        </div>
+                     </div>
+                     
+                       </div>
+                       </div>
+                   
+                
+            
+        </section>
+<!-- ==================== PAGE 2 =================================== -->
+            <section id="pg3">
+                <!-- <section class="parallax3"> -->
+<div id="slide-b" class="slides__slide page-3">PAGE 2
+                </section>
 
-  <!-- <section class="section red-200">Section B</section>
 
+                
+                <section class="section red-200">Section B</section>
+
+
+                
+                <section class="section red-300">Section C</section>
+            
+                <!-- <div class="slides__slide blue-100">Slide C</div>
+            </div> -->
+    
+ 
   <section class="section section--horizontal">
     <div class="section__inner">
       <div class="slides">
@@ -62,7 +133,7 @@
       </div>
     </div>
   </section>
+ 
 
-  <section class="section red-300">Section C</section> -->
 </body>
 </html>
