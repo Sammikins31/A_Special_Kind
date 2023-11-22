@@ -1,6 +1,6 @@
 * {
     box-sizing: border-box;
-margin: 0;
+    margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
@@ -346,7 +346,7 @@ img {
 }
 
 .bully-quote4 {
-    transform: translate(-6em, 4em);
+    transform: translate(4em, 9em);
     color: rgb(220, 208, 208);
     display: flex;
     font-family: 'Josefin Sans', sans-serif;
@@ -435,11 +435,22 @@ transform: translate(-2rem, 49.1rem);
 
 }
     
-.p3-corals{
-    transform: translate(-1rem, -8rem);
+.p3-coral1{
+    transform: translate(40rem, -6.8rem);
 } 
-    
-    
+.p3-coral2{
+    min-width: 60%;
+    transform: translate(-1rem, -8rem);
+}
+.p3-coral3{
+    min-width: 60%;
+    transform: translate(-8rem, 5rem);
+}  
+.p4-coral4{
+    min-width: 70%;
+    transform: translate(-1rem, -22rem);
+}
+
     
     
     
@@ -549,7 +560,7 @@ html {
 }
 
 
-/* @keyframes fadeIn {
+@keyframes fadeIn {
     0% {
         opacity: 0;
     }
@@ -557,7 +568,7 @@ html {
     100% {
         opacity: 1;
     }
-  } */
+  }
   
   .bully-quote1,
   .bully-quote2,
@@ -599,3 +610,31 @@ html {
         }
     }
 }
+
+
+@media (max-width: 600px) {
+    body {
+        font-size: 18px;
+    }
+    .logo {
+        font-size: 1.5em;
+    }
+    .navigation a {
+        padding: 4px 10px;
+    }
+ }
+ 
+ 
+ @media (max-width: 600px) {
+    .navigation {
+        flex-direction: column;
+    }
+ }
+ img {
+    width: 50vw;
+ }
+ body {
+    overflow-x: hidden;
+ }
+  
+   
