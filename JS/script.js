@@ -113,9 +113,48 @@ btn2.addEventListener('click', function() {
     observer.disconnect();
  });
  
- 
-  
-
+    // magnifier
+    let magnifier = document.getElementById('magnifier');
+    let initialMouseX;
+    let initialMouseY;
+    let initialMagnifierX;
+    let initialMagnifierY;
+    let isDragging = false;
+    
+    magnifier.addEventListener('mousedown', function(event) {
+       isDragging = true;
+       initialMouseX = event.clientX;
+       initialMouseY = event.clientY;
+       initialMagnifierX = magnifier.offsetLeft;
+       initialMagnifierY = magnifier.offsetTop;
+    
+       // Prevent text selection during drag
+       event.preventDefault();
+    });
+    
+    document.addEventListener('mousemove', function(event) {
+       if (isDragging) {
+           magnifier.style.left = initialMagnifierX + (event.clientX - initialMouseX) + 'px';
+           magnifier.style.top = initialMagnifierY + (event.clientY - initialMouseY) + 'px';
+       }
+    });
+    
+    document.addEventListener('mouseup', function(event) {
+       if (isDragging) {
+           isDragging = false;
+           initialMouseX = null;
+           initialMouseY = null;
+       }
+    });
+    
+    document.addEventListener('mouseleave', function(event) {
+       if (isDragging) {
+           isDragging = false;
+           initialMouseX = null;
+           initialMouseY = null;
+       }
+    });
+    
 // observerPage2.observe(page2);
 // document.addEventListener('DOMContentLoaded', function() {
 

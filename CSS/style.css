@@ -420,16 +420,16 @@ transform: translate(-2rem, 49.1rem);
 
 .p3-rockleft{
     width: 60%;
-    height: 70rem;
-    transform: translate(0, -11rem);
+    height: 65rem;
+    transform: translate(0, -3rem);
 }    
 .pg3-rock{
-    transform: translate(30rem, -8rem);
+    transform: translate(30rem, -6rem);
     min-width: 70%;
 }
     
 .pg3-bottom{
-    transform: translate(0, 16rem);
+    transform: translate(0, 19rem);
     width: 100%;
     position: absolute;
 
@@ -440,20 +440,58 @@ transform: translate(-2rem, 49.1rem);
 } 
 .p3-coral2{
     min-width: 60%;
-    transform: translate(-1rem, -8rem);
+    transform: translate(-1rem, -2rem);
 }
 .p3-coral3{
     min-width: 60%;
     transform: translate(-8rem, 5rem);
 }  
 .p4-coral4{
-    min-width: 70%;
-    transform: translate(-1rem, -22rem);
+    min-width: 50%;
+    transform: translate(-1rem, -9rem);
+}
+
+.mow, .mow-center{
+    width: 30% ;
+    transform: translate(21rem, -14rem);
+} 
+.seasheep{
+    width: 7%;
+    transform: translate(4rem, -11.9rem);
+}
+    
+/* .magnifier-container{
+    width: 500px;
+    height: 300px;
+    position: absolute;
+    z-index: 9;
+    align-items: center;
+} */
+.magnifier{
+   cursor: move;
+    z-index: 10;
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    cursor: grab;
+    user-select: none;
+}
+    
+
+
+.magnifier:active {
+    cursor: grabbing;
 }
 
     
-    
-    
+.magnifier:hover{
+    cursor: pointer;
+    transition: left 0.2s ease, top 0.2s ease;
+}
+/* .draggable {
+    position: absolute;
+    cursor: grab;
+} */
     
 
 
