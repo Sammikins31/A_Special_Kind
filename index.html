@@ -134,21 +134,24 @@
                             <img src="images/coral-2.png" class="p3-coral2">
                             <img src="images/coral-3.png" class="p3-coral3">
                             <img src="images/coral-4.png" class="p4-coral4">
-                            <!-- characters -->
+
+                <!-- ==================== PAGE 3 CHARACTERS =================================== -->
                           
-                            <div class="tooltip" onclick="togglePopup()">
+                            <!-- MAN-O'WAR -->
+                            <div class="tooltip-mow" onclick="toggleMOWPopup()">
                                 <img src="images/MOW1.png" alt="Hover Image" class="mow-hover">
                                 <span class="text">portuguese <br>man o' war</span>
                             </div>
                             
-                            <div class="popup-container" id="popupContent">
-                                <button class="close-button" onclick="closePopup()">X</button>
+                            <div class="popup-container" id="popupContent-MOW">
+                                <button class="close-button" onclick="closeMOWPopup()">X</button>
                                 <h2 class="popup-title">Portuguese Man O' War</h2> <br>
                                 <div class="pop-img-container">
                                 <div id="popmow-img"> 
                                     <img src="images/popmow.png">
                                 </div>
                             </div>  
+                            <!-- CONTENT FOR MAN O'WAR -->
                             <div id="species">
                                 <p> Species:</p>
                             </div>            
@@ -164,10 +167,115 @@
                             
                             <img src="images/MOW center.png" class="mow-center">
 
-                            <img src="images/Sea Sheep.png" class="seasheep" >
-                            <img src="images/Sea Bunny- white.png" class="sb-white">
-                            <img src="images/Sea Bunny-Yellow.png" class="sb-yellow">
-                            <img src="images/Flying Gurnard.png" class="flying-gurnard">
+                            <!-- SEA SHEEP -->
+                            <div class="tooltip-seasheep" onclick="toggleSeaSheepPopup()">
+                                <img src="images/Sea Sheep.png" alt="Hover Image" class="seasheep-hover" >
+                                <span class="text">Sea Sheep</span>
+                            </div> 
+
+                            <div class="popup-container" id="popupContent-Seasheep">
+                                <button class="close-button" onclick="closeSeaSheepPopup()">X</button>
+                                <h2 class="popup-title">Sea Sheep or Leaf Sheep </h2> <br>
+                                <h4 class="popup-scienceName">(Constasiella Kuroshimae)</h4>
+                                <div class="pop-img-container">
+                                <div id="popseasheep-img"> 
+                                    <img src="images/sea-sheep.gif">
+                                    
+                                </div>
+                            </div>  
+                             <!-- CONTENT FOR SEA SHEEP -->
+                            <div id="species">
+                                <p> Species:</p>
+                            </div>            
+                                 Sea Slugs<br>
+                                Lifespan: 2-3 years<br><br>
+                                <div id="facts">
+                                    <p>Facts:</p> 
+                                </div>
+                                    These sea slugs are extremely tiny- from 5 millimeters! <br>
+                                    They only eat this particular algae called 'Avrainvillea' which you can see below.<br>
+                                    When bigger animals are nearby, they use their toxic defence mecahnisms to fight them off!<br> <br>
+                                  These cute Sea Sheeps also glow!  <br> <br>
+                                </p>
+                                <div id="note">
+                                    <p>Note: These do not go 'baaaa'</p>
+                                </div>
+                            </div>
+
+                            <!-- Sea Bunnies -->
+                            <div class="tooltip-seabunny" onclick="toggleSeaBunnyPopUp()">
+                            <img src="images/Sea Bunny- white.png" alt="Hover Image" class="seabunny-hover">
+                            <img src="images/Sea Bunny-Yellow.png" alt="Hover Image" class="seabunnyY-hover">
+                            <span class="text">Sea Bunny</span>
+                            </div>
+
+                            <div class="popup-container" id="popupContent-Seabunny">
+                                <button class="close-button" onclick="closeSeaBunnyPopup()">X</button>
+                                <h2 class="popup-title">Sea Bunny</h2>
+                                <h4 class="popup-scienceName">(Jorunna Parva)</h4>
+                                <div class="pop-img-container">
+                                    <div id="popseabunny1-img">
+                                        <img src="images/sea-bunny1.gif">
+                                </div>
+                                <div id="popseabunny2-img">
+                                    <img src="images/sea-bunny2.gif">
+                                </div>
+                            </div>  
+                         
+                             <!-- CONTENT FOR SEA BUNNY -->
+                            <div id="species">
+                                <p> Species:</p>
+                            </div>            
+                                 Marine Gastropoda<br>
+                                Lifespan: 3 months - 1 year<br><br>
+                                <div id="facts">
+                                    <p>Facts:</p> 
+                                </div>
+                                  Sea Bunnies are actually very small creatures of 1cm in length! <br><br>
+                                  They may be cute but they are highly poisonous to any animal and human!<br>
+                                  These Sea Bunnies eat toxic sponges, sea algae, sea grass and other small marine animals.<br>
+                                </p>
+                                <div id="sb-note">
+                                    <p>No. They don't eat carrots</p>
+                                </div>
+                            </div>
+                            
+                           <!-- Flying Gurnard -->
+                           <div class="tooltip-fgurnard" onclick="toggleFGurnardPopUp()">
+                            <img src="images/Flying Gurnard.png" alt="Hover Image" class="fgurnard-hover">
+                            <span class="text">Flying Gurnard</span>
+                            </div>
+                        
+
+                            <div class="popup-container" id="popupContent-FGurnard">
+                                <button class="close-button" onclick="closeFGurnardPopup()">X</button>
+                                <h2 class="popup-title">Flying Gurnard</h2>
+                                <div class="pop-img-container">         
+                                 
+                            </div>  
+                            <div id="species">
+                                <p> Species:</p>
+                            </div>            
+                                 Dactylopterus Volitans<br>
+                                Lifespan: 1 year<br><br>
+                                <div id="facts">
+                                    <p>Facts:</p> 
+                                </div>
+                                 Looks similar to a flying fish but Flying Gurnards can't glide or fly in the air, but they dp glide on the surface of the water for a short period of time,
+                                 with their colourful widespread pictorial fins. <br><br>
+                                 They can get as big as 20 inches and weigh up to 4 pounds!<br><br>
+                                 The word 'Gurnard' is french for grunt, because this fish makes growing sounds.<br>
+                                 Maybe these are Pirate Fish... GRRRrrrr!!!
+                                </p>
+                               
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+
+
+
+                           
                             <div id="magnifier" class="magnifier" draggable="true">
                                 <img src="images/magnifier.png" alt="Magnifier" class="magnifier-img">
                                 <div class="magnifying-glass" id="magnifying-glass"></div>

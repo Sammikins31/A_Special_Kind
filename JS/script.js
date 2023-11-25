@@ -210,15 +210,38 @@ btn2.addEventListener('click', function() {
  
 
 // Pop Up Content
-function togglePopup() {
-  var popup = document.getElementById("popupContent");
+function toggleMOWPopup() {
+  var popup = document.getElementById("popupContent-MOW");
   popup.style.display = popup.style.display === "none" ? "block" : "none";
 }
-function closePopup() {
-  var popup = document.getElementById("popupContent");
+function closeMOWPopup() {
+  var popup = document.getElementById("popupContent-MOW");
   popup.style.display = "none";
 }
  
+function toggleSeaSheepPopup() {
+  var popup = document.getElementById("popupContent-Seasheep");
+  popup.style.display = popup.style.display === "none" ? "block" : "none";
+}
+function closeSeaSheepPopup() {
+  var popup = document.getElementById("popupContent-Seasheep");
+  popup.style.display = "none";
+}
  
-
-    
+function toggleSeaBunnyPopUp() {
+  var popup = document.getElementById("popupContent-Seabunny");
+  popup.style.display = popup.style.display === "none" ? "block" : "none";
+}
+function closeSeaBunnyPopup() {
+  var popup = document.getElementById("popupContent-Seabunny");
+  popup.style.display = "none";
+}
+ 
+function toggleFGurnardPopUp() {
+  var popup = document.getElementById("popupContent-FGurnard");
+  popup.style.display = popup.style.display === "none" ? "block" : "none";
+}
+function closeFGurnardPopup() {
+  var popup = document.getElementById("popupContent-FGurnard");
+  popup.style.display = "none";
+}

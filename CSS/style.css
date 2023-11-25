@@ -466,11 +466,7 @@ transform: translate(-2rem, 49.1rem);
     position: relative;
     z-index: 0;
 }  */
-.seasheep{
-    width: 7%;
-    transform: translate(4rem, -11.9rem);
-    transition: transform 0.3s ease-in-out;
-}
+
 .sb-white{
     width: 18%;
     transform: translate(69rem, -5rem);
@@ -718,7 +714,9 @@ transform: translate(-2rem, 49.1rem);
     min-width: 100vw;
 }
 
-.tooltip {
+/* TOOLTIP */
+
+.tooltip-mow, .tooltip-seasheep, .tooltip-seabunny, .tooltip-fgurnard {
     position: relative;
     display: inline-block;
     border-bottom: 1px dotted black;
@@ -726,24 +724,52 @@ transform: translate(-2rem, 49.1rem);
     cursor: pointer;
 }
 
-.tooltip .mow-hover{
+.tooltip-mow .mow-hover{
     width: 13rem;
     height: auto;
     margin-top: -22rem;
-    margin-left: -20rem;
+    margin-left: -18rem;
 }
+.tooltip-seasheep .seasheep-hover{
+    width: 8rem;
+    height: auto;
+    margin-top: -15rem;
+    margin-left: -49rem;
+}
+.tooltip-seabunny .seabunny-hover{
+    width: 11rem;
+    height: auto;
+    margin-top: -7rem;
+    margin-left: 22rem;
+}
+.tooltip-seabunny .seabunnyY-hover{
+    width: 14rem;
+    height: auto;
+    margin-top: -6rem;
+    margin-left: 10rem;
+}
+.tooltip-fgurnard .fgurnard-hover{
+    width: 17rem;
+    height: auto;
+    margin-top: 9rem;
+    margin-left: -6rem;
+}
+
 .mow-center{
     width: 9rem;
     margin-top: -18.6rem;
     margin-left: 31.7rem;
 }
-.mow-hover {
-    width: 100px; /* Set the desired width */
+.mow-hover, .seasheep-hover, .seabunny-hover, .fgurnard-hover {
+    width: 100px; 
     height: auto;
     cursor: pointer;
 }
 
-.tooltip .text {
+.tooltip-mow .text {
+    bottom: 16rem;
+    left: -2.3rem;
+    margin-left: -60px;
     position: absolute;
     width: 120px;
     background-color: black;
@@ -752,16 +778,61 @@ transform: translate(-2rem, 49.1rem);
     padding: 5px 0;
     z-index: 1;
     border-radius: 6px;
-    bottom: 16rem;
-    left: -2.3rem;
-    margin-left: -60px;
-    transition: opacity 0.3s; /* Reduced from 3s to 0.3s */
+    transition: opacity 0.3s; 
     opacity: 0; /* Ensure it's initially hidden */
     text-transform: capitalize;
 }
 
+.tooltip-seasheep .text {
+    bottom: 17rem;
+    left: -45rem;
+    margin-left: -60px;
+    position: absolute;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    z-index: 1;
+    border-radius: 6px;
+    transition: opacity 0.3s; /* Reduced from 3s to 0.3s */
+    opacity: 0; /* Ensure it's initially hidden */
+    text-transform: capitalize;
+}
+.tooltip-seabunny .text {
+    bottom: 6rem;
+    left: 21rem;
+    margin-left: -60px;
+    position: absolute;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    z-index: 1;
+    border-radius: 6px;
+    transition: opacity 0.3s; /* Reduced from 3s to 0.3s */
+    opacity: 0; /* Ensure it's initially hidden */
+    text-transform: capitalize;
+}
+.tooltip-fgurnard .text {
+    bottom: -9rem;
+    left: 17rem;
+    margin-left: -20rem;
+    position: absolute;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    z-index: 1;
+    border-radius: 6px;
+    transition: opacity 0.3s; /* Reduced from 3s to 0.3s */
+    opacity: 0; 
+    text-transform: capitalize;
+}
 /* TOOLTIP ARROW FACING LEFT <--MOW */ 
-.tooltip .text::after {
+.tooltip-mow .text::after {
     position: absolute;
     content: "";
     border-style: solid;
@@ -772,15 +843,49 @@ transform: translate(-2rem, 49.1rem);
     margin-top: -5px; /* Centering the arrow vertically */
     transform: translateY(-50%); /* Centering the arrow vertically in older browsers */
 }
+/* TOOLTIP ARROW FACING DOWN */
+.tooltip-seasheep .text::after {
+    position: absolute;
+    content: "";
+    border-style: solid;
+    border-width: 5px;
+    border-color: black transparent transparent transparent;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+}
 
+.tooltip-seabunny .text::after {
+    position: absolute;
+    content: "";
+    border-style: solid;
+    border-width: 5px;
+    border-color: black transparent transparent transparent;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+}
+.tooltip-fgurnard .text::after {
+    position: absolute;
+    content: "";
+    border-style: solid;
+    border-width: 5px;
+    border-color: black transparent transparent transparent;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+}
+.tooltip-mow:hover .text, .tooltip-seasheep:hover .text, .tooltip-seabunny:hover .text, .tooltip-fgurnard:hover .text {
+    opacity: 1;
+}
+
+
+/* POP UP */
 .popup-container {
     display: none;
     position: fixed;
-    width: 25%;
-    height: 65%;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -12rem);
     padding: 20px;
     background-color:#9cd6cb;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -789,6 +894,35 @@ transform: translate(-2rem, 49.1rem);
     font-size: 15px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
+#popupContent-MOW {
+    width: 25%;
+    height: 65%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -12rem);
+}
+#popupContent-Seasheep{
+    width: 25%;
+    height: 65%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-40rem, -10rem);
+}
+#popupContent-Seabunny{
+    width: 25%;
+    height: 65%;
+    top: 50%;
+    left: 50%;
+    transform: translate(20rem, -8rem);
+}
+#popupContent-FGurnard {
+    width: 25%;
+    height: 65%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -12rem);
+}
+
 .popup-header {
     display: flex;
     justify-content: space-between;
@@ -799,7 +933,7 @@ transform: translate(-2rem, 49.1rem);
     position: absolute;
     display: flex;
     margin-left: 19.3rem;
-    margin-top: -0.6rem;
+    margin-top: -0.3rem;
     cursor: pointer;
     background-color: transparent;
     border: none;
@@ -808,7 +942,10 @@ transform: translate(-2rem, 49.1rem);
   .popup-title{
     text-align: center;
   }
- 
+  .popup-scienceName{
+    font-style: italic;
+    text-align: center;
+  }
 
   #popmow-img img {
     width: 100%; 
@@ -821,7 +958,45 @@ transform: translate(-2rem, 49.1rem);
     position: fixed;
     display: flex;
 }
+#popseasheep-img img{
+    width: 100%;
+    height: auto;
+    max-width: 170px;
+    max-height: 200px;
+    margin-top: 13.9rem;
+    margin-left: 1.2rem;
+    position: fixed;
+    display: flex;
+    border-radius: 3rem;
+}
+#popseabunny1-img img{
+    width: 100%;
+    height: auto;
+    max-width: 180px;
+    max-height: 200px;
+    margin-top: 14rem;
+    margin-left: 11.7rem;
+    border-radius: 3rem;
+}
+#popseabunny2-img img{
+    width: 100%;
+    height: auto;
+    max-width: 190px;
+    max-height: 200px;
+    margin-top: 16rem;
+    margin-left: 0;
+    border-radius: 3rem;
+}
 
+
+#note{
+    text-align: right;
+    margin-top: 2rem;
+    margin-right: -0.8rem;
+}
+#sb-note{
+    margin-top: 2rem;
+}
 .pop-img-container {
     text-align: center; 
 }
@@ -830,7 +1005,7 @@ transform: translate(-2rem, 49.1rem);
     text-decoration: underline;
     font-weight: bold;
 }
- 
+
 
 /* TOOLTIP ARROW FACING RIGHT */
 /* .tooltip .text::after {
@@ -859,9 +1034,6 @@ transform: translate(-2rem, 49.1rem);
     margin-left: -5px;
 } */
 
-.tooltip:hover .text {
-    opacity: 1;
-}
 
    
 
