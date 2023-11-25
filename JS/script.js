@@ -2,37 +2,57 @@ let logoText = document.getElementById('logo-text');
 let bubbles = document.getElementById('bubbles');
 let rockLeft = document.getElementById('rock-left');
 let coral = document.getElementById('coral');
-// let bubble_pg1 = document.querySelector('.bubble_pg1');
 let bully1 = document.querySelector('.bully1');
 let bully3 = document.querySelector('.bully3');
 let herman = document.querySelector('.herman');
+let underwater = document.querySelector('.underwater');
 
 
-// Parallax scroll
-window.addEventListener('scroll', ()=> {
+const horizontals = document.querySelectorAll('.section--horizontal');
+
+// Throttle function from lodash
+const throttle = (func, limit) => {
+    let inThrottle;
+    return function () {
+        const args = arguments;
+        const context = this;
+        if (!inThrottle) {
+            func.apply(context, args);
+            inThrottle = true;
+            setTimeout(() => (inThrottle = false), limit);
+        }
+    };
+};
+
+// <!-- ==================== PARALLAX SCROLL =================================== -->
+window.addEventListener('scroll', throttle(() => {
     let value = window.scrollY;
+// window.addEventListener('scroll', ()=> {
+//     let value = window.scrollY;
 
     // logo scroll behind
-    logoText.style.marginTop = value * 1.0 + 'px';
+    logoText.style.transform = `translateY(${value * 1.5}px)`;
     // bubbles move to top when scrolled
-    bubbles.style.top = value * -1.5 + 'px';
-    rockLeft.style.left = value * -1 + 'px';
-    coral.style.top = value * -0.2 + 'px';
-});
-window.addEventListener('scroll', () => {
+    bubbles.style.transform = `translateY(${value * -1.5}px)`;
+    rockLeft.style.transform = `translateX(${value * -1}px)`;
+    coral.style.transform = `translateY(${value * 0.2}px)`;
+}, 16)); 
+
+
+
+window.addEventListener('scroll', throttle(() => {
     let scrollPosition = window.scrollY;
-    // bubble_pg1.style.top = scrollPosition * 0.5 + 'px';
    bully1.style.left = scrollPosition * 0.10 + 'px';
    bully3.style.left = scrollPosition * -0.1 + 'px';
    herman.style.left = scrollPosition * 0.1 + 'px';
- });
+   underwater.style.transform = `translateY(${value * -0.5}px)`;
+
+}, 16));
  
- 
 
+// <!-- ==================== HORIZONTAL & VERTICAL SCROLLS =================================== -->
 
-// const rules for horizontal andv vertical scrolls
-
-const horizontals = document.querySelectorAll('.section--horizontal');
+// const horizontals = document.querySelectorAll('.section--horizontal');
 
 const setTranslateX = (element, progression) => {
   if (progression > 1) {
@@ -44,12 +64,13 @@ const setTranslateX = (element, progression) => {
   const toMove = element.offsetWidth - window.innerWidth;
   const transform = -1 * toMove * progression + 'px';
   
-  element.style.transform = 'translateX(' + transform + ')';
-}
+  element.style.transform = `translateX(${transform})`;
+};
 
-window.addEventListener('scroll', () => {
-  horizontals.forEach(horizontal => {
-    const inner = horizontal.querySelector('.section__inner');
+window.addEventListener('scroll', throttle(() => {
+    horizontals.forEach(horizontal => {
+        const inner = horizontal.querySelector('.section__inner');
+
 
     window.requestAnimationFrame(() => {
       const toGo = horizontal.offsetHeight - window.innerHeight;
@@ -72,36 +93,57 @@ window.addEventListener('scroll', () => {
       setTranslateX(inner, progression);
     });
   });
-});
+}, 16));
 
-
+// <!-- ==================== PG1 QUOTES- INTERSECTION OBSERVER =================================== -->
+// creating an intersection observer for page 1 
+// So everytime scrolls into page 1 the quote animation will start and appear
 let quote1 = document.querySelector('.quote1');
 let quote2 = document.querySelector('.quote2');
 let quote3 = document.querySelector('.quote3');
+let quote4 = document.querySelector('.quote4');
+let quote5 = document.querySelector('.quote5');
+let quote6 = document.querySelector('.quote6');
 
 let observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
-            entry.target.style.animation = 'fadeInOut 8s';
-            if (entry.target === quote2) {
-                entry.target.style.setProperty('animation-delay', '6s');
-            } else if (entry.target === quote3) {
-                entry.target.style.setProperty('animation-delay', '10s');
-            }
+            window.requestAnimationFrame(() => {
+                // Adding the fade in out animation from css rules
+                entry.target.style.animation = 'fadeInOut 8s';
+
+                if (entry.target === quote2) {
+                    entry.target.style.setProperty('animation-delay', '6s');
+                } else if (entry.target === quote3) {
+                    entry.target.style.setProperty('animation-delay', '10s');
+                } else if (entry.target === quote4) {
+                    entry.target.style.setProperty('animation-delay', '16s');
+                } else if (entry.target === quote5) {
+                    entry.target.style.setProperty('animation-delay', '23s');
+                } else if (entry.target === quote6) {
+                    entry.target.style.setProperty('animation-delay', '24s');
+                }
+            });
         } else {
             entry.target.style.animation = 'none';
         }
     });
-  }, {
+}, {
     threshold: 0.1
-  });
-  
-  observer.observe(quote1);
-  observer.observe(quote2);
-  observer.observe(quote3);
-  
+});
+
+observer.observe(quote1);
+observer.observe(quote2);
+observer.observe(quote3);
+observer.observe(quote4);
+observer.observe(quote5);
+observer.observe(quote6);
 
 
+  
+
+// <!-- ==================== BUTTON 2 =================================== -->
+// When clicking on button 2 it will stop quote animation entirely and all quote texts appear
 let btn2 = document.getElementById('btn2');
 let quotes = document.querySelectorAll('.quote-container h2');
 
@@ -113,12 +155,18 @@ btn2.addEventListener('click', function() {
     observer.disconnect();
  });
  
-    // magnifier
+// <!-- ==================== MAGNIFIER =================================== -->
+// Making the magnifier a draggable object
+
+
     let magnifier = document.getElementById('magnifier');
+
+
     let initialMouseX;
     let initialMouseY;
     let initialMagnifierX;
     let initialMagnifierY;
+
     let isDragging = false;
     
     magnifier.addEventListener('mousedown', function(event) {
@@ -127,6 +175,7 @@ btn2.addEventListener('click', function() {
        initialMouseY = event.clientY;
        initialMagnifierX = magnifier.offsetLeft;
        initialMagnifierY = magnifier.offsetTop;
+       
     
        // Prevent text selection during drag
        event.preventDefault();
@@ -154,6 +203,15 @@ btn2.addEventListener('click', function() {
            initialMouseY = null;
        }
     });
+
+    
+    // Magnifier glass
+   
+ 
+
+
+
+
     
 // observerPage2.observe(page2);
 // document.addEventListener('DOMContentLoaded', function() {

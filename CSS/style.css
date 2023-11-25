@@ -2,12 +2,14 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+
+    
 }
 
 html {
     overflow-x: hidden;
-}
+    scroll-behavior: smooth;
+    }
 
 body {
     background: linear-gradient(#270aff, #034b6a);
@@ -17,7 +19,7 @@ body {
 }
 
 header {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
@@ -99,13 +101,15 @@ img {
     height: 160vh;
 }
 
-.wave-left,
+/* .wave-left,
 .wave-right {
     object-fit: cover;
     width: 100%;
     height: 100%;
     position: absolute;
-}
+} */
+
+
 
 #rock-left {
     transform: translate(0, 100vh);
@@ -137,11 +141,9 @@ img {
 
 .page-1 img {
     position: absolute;
-    /* Add this line */
     bottom: 90%;
-    /* Add this line */
     width: 100%;
-    /* Add this line */
+
 }
 
 .wavy-wave {
@@ -154,8 +156,8 @@ img {
 .left-wave1 {
     position: absolute;
     display: flex;
-    width: 100vw;
-    top: -1%;
+    width: 28.2vw;
+    top: -0%;
 
 }
 
@@ -176,9 +178,10 @@ img {
 .den {
     position: relative;
     bottom: 0;
-    /* top: 10.5rem; */
+    top: 15rem;
     display: flex;
-    width: 50rem;
+    width: 46rem;
+    height: 32rem;
     transform: scaleX(-1);
     margin-left: 50rem;
 }
@@ -187,6 +190,10 @@ img {
     position: absolute;
     display: flex;
     margin-top: 16em;
+    width: 12%;
+    height: auto;
+    transform: translate(10em, 7em);
+
 }
 
 #btn2 {
@@ -209,14 +216,15 @@ img {
 
 .quote-container {
     font-size: 18px;
+    width: 900px;
+    height: 500px;
+    
 }
 
 .quote1 {
     opacity: 0;
     animation: fadeInOut 8s;
-    font-family: 'Josefin Sans', sans-serif;
     margin-right: 20em;
-    margin-top: 20em;
     margin-left: 3em;
 }
 
@@ -224,7 +232,6 @@ img {
     opacity: 0;
     animation: fadeInOut 8s;
     animation-delay: 6s;
-    font-family: 'Josefin Sans', sans-serif;
     margin-right: 25em;
     margin-left: 4em;
 }
@@ -233,7 +240,6 @@ img {
     opacity: 0;
     animation: fadeInOut 8s;
     animation-delay: 10s;
-    font-family: 'Josefin Sans', sans-serif;
     margin-right: 25em;
     margin-left: 5em;
 }
@@ -242,7 +248,6 @@ img {
     opacity: 0;
     animation: fadeInOut 8s;
     animation-delay: 16s;
-    font-family: 'Josefin Sans', sans-serif;
     margin-left: 25em;
     margin-top: 5em;
     transform: translate(0, -8em);
@@ -252,7 +257,6 @@ img {
     opacity: 0;
     animation: fadeInOut 8s;
     animation-delay: 23s;
-    font-family: 'Josefin Sans', sans-serif;
     margin-left: 30em;
     margin-bottom: 5em;
     margin-top: 5em;
@@ -263,7 +267,6 @@ img {
     opacity: 0;
     animation: fadeIn 8s;
     animation-delay: 24s;
-    font-family: 'Josefin Sans', sans-serif;
     margin-left: 30em;
     margin-bottom: 5em;
     margin-top: 3em;
@@ -277,6 +280,8 @@ img {
 .quote5,
 .quote6 {
     opacity: 0;
+    font-family: 'Josefin Sans', sans-serif;
+    white-space: nowrap;
 }
 
 
@@ -293,34 +298,38 @@ img {
 .herman{
     position: absolute;
     display: flex;
-    width: 600px;
-    transform: translate(-20em, 30em);
+    width: 27rem;
+    transform: translate(-21em, 33em);
 }
 
 .den2 {
     position: relative;
     bottom: 0;
+    top: 15rem;
     display: flex;
-    width: 50rem;
-    height: 40rem;
+    width: 46rem;
+    height: 32rem;
 }
 
 .bully1 {
     position: absolute;
     display: flex;
-    transform: translate(-20rem, -4rem);
+    transform: translate(-16rem, 4rem);
+    width: 17rem;
 }
 
 .bully2 {
     position: absolute;
     display: flex;
-    transform: translate(7rem, -2rem);
+    transform: translate(7rem, 5rem);
+    width: 17rem;
 }
 
 .bully3 {
     position: absolute;
     display: flex;
-    transform: translate(70rem, 3rem);
+    transform: translate(100rem, 15.8rem);
+    width: 17rem;
 }
 
 .bully-quote1 {
@@ -451,17 +460,32 @@ transform: translate(-2rem, 49.1rem);
     transform: translate(-1rem, -9rem);
 }
 
-.mow, .mow-center{
+/* .mow, .mow-center{
     width: 30% ;
-    transform: translate(21rem, -14rem);
-} 
+    transform: translate(50%, -50%);
+    position: relative;
+    z-index: 0;
+}  */
 .seasheep{
     width: 7%;
     transform: translate(4rem, -11.9rem);
+    transition: transform 0.3s ease-in-out;
+}
+.sb-white{
+    width: 18%;
+    transform: translate(69rem, -5rem);
+}
+.sb-yellow{
+    width: 18%;
+    transform: translate(62rem, 1rem);
+}
+.flying-gurnard{
+    width: 28%;
+    transform: translate(50rem, 16rem);
 }
     
 /* .magnifier-container{
-    width: 500px;
+    width: 100px;
     height: 300px;
     position: absolute;
     z-index: 9;
@@ -470,34 +494,146 @@ transform: translate(-2rem, 49.1rem);
 .magnifier{
    cursor: move;
     z-index: 10;
-    width: 10px;
-    height: 10px;
+    width: 20%;
+    height: 25%;
     position: absolute;
     cursor: grab;
     user-select: none;
+    overflow: hidden;
 }
-    
+/* .image-container {
+    position: relative;
+    display: inline-block;
+  } */
+.magnifying-glass{
+    background-color: rgba(255, 255, 255, 0.5); /* Adjust the color and transparency as needed */
+    border-radius: 50%;
+    position: absolute;
+    width: 45%;
+    height: 62%;
+    top: 0;
+    left: 0;
+    transform: translate(16px, 1.5rem);
+    /* ensure that the circle doesn't interfere with the mouse events */
+    pointer-events: none;
+    transform-origin: center center;
+    transition: transform 0.2s ease;    
+    border: 2px solid #333; /* Magnifying glass border color */
+    cursor: zoom-in;
+    background-size: 300% 300%; /* Initial background size for zoom effect */
+}
+
+/* .zoomed-image {
+        width: 200%;
+        height: 200%;
+
+    position: absolute;
+    transition: transform 0.1s ease-out;
+    transform-origin: top left;
+} */
 
 
+.magnifier-img {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+/* .magnifying-glass:hover {
+    transform: scale(1.5); 
+} */
 .magnifier:active {
     cursor: grabbing;
 }
-
     
-.magnifier:hover{
+/* .magnifier:hover{
     cursor: pointer;
     transition: left 0.2s ease, top 0.2s ease;
-}
+} */
 /* .draggable {
     position: absolute;
     cursor: grab;
 } */
     
+.img-magnifier-container {
+    position: relative;
+  }
+  
+  .img-magnifier-glass {
+    position: absolute;
+    border: 3px solid #000;
+    border-radius: 50%;
+    cursor: none;
+    /*Set the size of the magnifier glass:*/
+    width: 100px;
+    height: 100px;
+  }
 
 
 .p3-bottom{
     transform: translate(0, 22rem);
 }
+
+
+/* PAGE 4 */
+
+.c-squid{
+    width: 30%;
+    opacity: 0.9;
+    transform: scaleX(-1);
+    top: 1%;
+}
+.oreo{
+    width: 10%;
+    transform: translate(68rem, -3rem);
+}
+
+.s-angel, 
+.sa-left,
+.sa-right{
+    width: 27%;
+    transform: translate(0, 17rem);
+}
+
+/* PAGE 5 */
+.g-o{
+    width: 15%;
+    transform: translate(70rem, -20rem);
+}
+
+.j-squid{
+    width: 35%;
+    transform: translate(-5rem, -1rem);
+    
+}
+
+.siphon{
+    /* transform: translate(48rem, 10rem); */
+    transform: skewY(10deg);
+    margin-left: 40rem;
+    margin-top: 18rem;
+    width: 56rem;
+}
+
+.container{
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  #lens{
+    position: absolute;
+    border: 2px solid grey;
+    border-radius: 50%;
+    overflow: hidden;
+    cursor:none;
+    box-shadow: inset 0 0 10px 2px grey;
+    filter: drop-shadow(0 0 2px grey);
+    & > *{
+        cursor:none;
+    }
+  }
 
 /* SECTION RULES */
 .section {
@@ -542,6 +678,13 @@ transform: translate(-2rem, 49.1rem);
 }
 
 /* SLIDES PAGES */
+
+.title-page, .page-1, #page2, .page-3, .slide-pg4, .slide-pg5, .page-6{
+    min-height: 100vh;
+    min-width: 100vw;
+}
+
+
 .title-page {
     background: linear-gradient(#270aff, #034b6a);
 }
@@ -552,33 +695,112 @@ transform: translate(-2rem, 49.1rem);
 
 #page2 {
     background: linear-gradient(#000000, #1271ff, #034b6a);
+
 }
 
 .page-3 {
     background: linear-gradient(#034b6a, #1271ff);
-    min-height: 100vh;
-    min-width: 100vw;
+   
 }
 
 .slide-pg4 {
-    background-color: #1fb670;
+    background: linear-gradient(#2e7fe2, #000000,#3142a1 );
 }
 
 .slide-pg5 {
-    background-color: #b61f65;
-}
-
-.red-300 {
-    background-color: #861007;
+    background: linear-gradient(#3142a1, #000000);
 }
 
 .page-6 {
-    background: linear-gradient(#034b6a, #1271ff);
+    
+    background: linear-gradient(#000000, #7ebaff );
     min-height: 100vh;
     min-width: 100vw;
 }
 
+.tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+    margin: 20px; /* Adjusted from 100px to 20px */
+}
 
+.tooltip .mow-hover{
+    width: 13rem;
+    height: auto;
+    margin-top: -22rem;
+    margin-left: -20rem;
+}
+.mow-center{
+    width: 9rem;
+    margin-top: -18.3rem;
+    margin-left: 31.7rem;
+}
+
+.tooltip .text {
+    position: absolute;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    z-index: 1;
+    border-radius: 6px;
+    bottom: 16rem;
+    left: -2.3rem;
+    margin-left: -60px;
+    transition: opacity 0.3s; /* Reduced from 3s to 0.3s */
+    opacity: 0; /* Ensure it's initially hidden */
+    text-transform: capitalize;
+}
+
+/* TOOLTIP ARROW FACING LEFT <--MOW */ 
+.tooltip .text::after {
+    position: absolute;
+    content: "";
+    border-style: solid;
+    border-width: 5px 5px 5px 0; /* Adjusted to create a left-facing arrow */
+    border-color: transparent black transparent transparent; /* Adjusted to set the arrow color */
+    top: 50%;
+    right: 100%; /* Changed from left to right to position the arrow on the left side */
+    margin-top: -5px; /* Centering the arrow vertically */
+    transform: translateY(-50%); /* Centering the arrow vertically in older browsers */
+}
+
+
+
+/* TOOLTIP ARROW FACING RIGHT */
+/* .tooltip .text::after {
+    position: absolute;
+    content: "";
+    border-style: solid;
+    border-width: 5px 0 5px 5px; 
+    border-color: transparent transparent transparent black;
+    top: 50%;
+    left: 100%;
+    margin-top: -5px; 
+    transform: translateY(-50%); 
+} */
+
+
+
+/* TOOLTIP ARROW FACING DOWN */
+/* .tooltip .text::after {
+    position: absolute;
+    content: "";
+    border-style: solid;
+    border-width: 5px;
+    border-color: black transparent transparent transparent;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+} */
+
+.tooltip:hover .text {
+    opacity: 1;
+}
+
+   
 
 
 
@@ -591,11 +813,6 @@ transform: translate(-2rem, 49.1rem);
 
 
 
-
-
-html {
-    scroll-behavior: smooth;
-}
 
 
 @keyframes fadeIn {
@@ -634,12 +851,11 @@ html {
 .indicator {
     color: white;
     text-align: center;
-    position: fixed;
+    position: absolute;
     bottom: 12rem;
     left: 50%;
     transform: translate3d(-50%, 0, 0);
     font-size: 1.2rem;
-
     span {
         display: block;
 
@@ -649,6 +865,7 @@ html {
     }
 }
 
+ 
 
 @media (max-width: 600px) {
     body {
