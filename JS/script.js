@@ -214,6 +214,10 @@ function togglePopup() {
   var popup = document.getElementById("popupContent");
   popup.style.display = popup.style.display === "none" ? "block" : "none";
 }
+function closePopup() {
+  var popup = document.getElementById("popupContent");
+  popup.style.display = "none";
+}
  
  
 

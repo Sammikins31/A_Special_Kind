@@ -776,18 +776,60 @@ transform: translate(-2rem, 49.1rem);
 .popup-container {
     display: none;
     position: fixed;
-    width: 30%;
-    height: 50%;
+    width: 25%;
+    height: 65%;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -12rem);
     padding: 20px;
-    background-color:rgba(201, 201, 201, 0.5);;
+    background-color:#9cd6cb;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     z-index: 2;
     border-radius: 20%;
+    font-size: 15px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
-  
+.popup-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.close-button {
+    position: absolute;
+    display: flex;
+    margin-left: 19.3rem;
+    margin-top: -0.6rem;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    font-size: 18px;
+}
+  .popup-title{
+    text-align: center;
+  }
+ 
+
+  #popmow-img img {
+    width: 100%; 
+    height: auto; 
+    max-width: 170px;
+    max-height: 200px; 
+    margin-left: 12rem;
+    margin-top: 13rem;
+    border-radius: 3rem;
+    position: fixed;
+    display: flex;
+}
+
+.pop-img-container {
+    text-align: center; 
+}
+
+#species, #facts{
+    text-decoration: underline;
+    font-weight: bold;
+}
  
 
 /* TOOLTIP ARROW FACING RIGHT */
