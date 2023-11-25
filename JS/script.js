@@ -209,77 +209,12 @@ btn2.addEventListener('click', function() {
    
  
 
-
-
-
-    
-// observerPage2.observe(page2);
-// document.addEventListener('DOMContentLoaded', function() {
-
-//     let page2 = document.getElementById('page2');
-//     let quotesContainer = document.querySelector('.bully-container');
-//     let bullyQuotes = document.querySelectorAll('.bully-quote');
-//     let bullyQuote1 = document.querySelector('.bully-quote1');
-//     let bullyQuote2 = document.querySelector('.bully-quote2');
-//     let bullyQuote3 = document.querySelector('.bully-quote3');
-
-
-//     let observerPage2 = new IntersectionObserver((entries) => {
-//         entries.forEach((entry, index) => {
-//             if (entry.isIntersecting) {
-//                 // The user has scrolled to the second page
-//                 quotesContainer.style.opacity = '1';
-
-//                 // Calculate animation delay based on the index
-//                 let delay = index * 2; // Adjust the delay as needed
-
-//                 bullyQuotes.forEach((bullyQuote, i) => {
-//                     bullyQuote.style.opacity = '0';
-//                     bullyQuote.style.animation = `fadeIn 1s forwards ${delay + i}s`;
-//                 });
-//             } else {
-//                 // The user is not on the second page
-//                 quotesContainer.style.opacity = '0';
-//                 bullyQuotes.forEach(bullyQuote => {
-//                     bullyQuote.style.opacity = '0';
-//                     bullyQuote.style.animation = 'none';
-//                 });
-//             }
-//         });
-//     }, {
-//         threshold: 0.5 // Adjust the threshold as needed
-//     });
-
-//     observerPage2.observe(page2);
-// });
-// bullyQuotes.forEach(bullyQuote => {
-//     observer.observe(bullyQuote);
-//  });
+// Pop Up Content
+function togglePopup() {
+  var popup = document.getElementById("popupContent");
+  popup.style.display = popup.style.display === "none" ? "block" : "none";
+}
+ 
  
 
-
-// /let btn2 = document.getElementById('btn2');
-// let quotes = document.querySelectorAll('.quote-container h2');
-
-// let isAnimationPaused = false;
-
-// btn2.addEventListener('click', function() {
-//    if (isAnimationPaused) {
-//     // resume annimation
-//     quotes.forEach(quote => {
-//         quote,style.animatioPlaystate = 'running';
-//     });
-//     observer.observe(quote1);
-//     observer.observe(quote2);
-//     observer.observe(quote3);
-// }else{
-//     // pause aninmation and show all quotes with opacity 1
-//     quotes.forEach(quote => {
-//         quote.style.opacity = '1';
-//         quote.style.animationPlayState = 'paused';
-//     });
-//     observer.disconnect();
-// }  
-// // toggle the animation state
-// isAnimationPaused = !isAnimationPaused;
-//    });
+    

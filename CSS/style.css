@@ -723,6 +723,7 @@ transform: translate(-2rem, 49.1rem);
     display: inline-block;
     border-bottom: 1px dotted black;
     margin: 20px; /* Adjusted from 100px to 20px */
+    cursor: pointer;
 }
 
 .tooltip .mow-hover{
@@ -733,8 +734,13 @@ transform: translate(-2rem, 49.1rem);
 }
 .mow-center{
     width: 9rem;
-    margin-top: -18.3rem;
+    margin-top: -18.6rem;
     margin-left: 31.7rem;
+}
+.mow-hover {
+    width: 100px; /* Set the desired width */
+    height: auto;
+    cursor: pointer;
 }
 
 .tooltip .text {
@@ -767,7 +773,22 @@ transform: translate(-2rem, 49.1rem);
     transform: translateY(-50%); /* Centering the arrow vertically in older browsers */
 }
 
-
+.popup-container {
+    display: none;
+    position: fixed;
+    width: 30%;
+    height: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -12rem);
+    padding: 20px;
+    background-color:rgba(201, 201, 201, 0.5);;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 2;
+    border-radius: 20%;
+}
+  
+ 
 
 /* TOOLTIP ARROW FACING RIGHT */
 /* .tooltip .text::after {
