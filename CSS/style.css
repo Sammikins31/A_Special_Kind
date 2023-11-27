@@ -728,7 +728,7 @@ transform: translate(-2rem, 49.1rem);
     width: 13rem;
     height: auto;
     margin-top: -22rem;
-    margin-left: -18rem;
+    margin-left: -16rem;
 }
 .tooltip-seasheep .seasheep-hover{
     width: 8rem;
@@ -890,7 +890,7 @@ transform: translate(-2rem, 49.1rem);
     background-color:#9cd6cb;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     z-index: 2;
-    border-radius: 20%;
+    border-radius: 10%;
     font-size: 15px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
@@ -952,7 +952,7 @@ transform: translate(-2rem, 49.1rem);
     height: auto; 
     max-width: 170px;
     max-height: 200px; 
-    margin-left: 12rem;
+    margin-left: 12.5rem;
     margin-top: 13rem;
     border-radius: 3rem;
     position: fixed;
@@ -963,29 +963,29 @@ transform: translate(-2rem, 49.1rem);
     height: auto;
     max-width: 170px;
     max-height: 200px;
-    margin-top: 13.9rem;
-    margin-left: 1.2rem;
+    margin-top: 13.6rem;
+    margin-left: 0.5rem;
     position: fixed;
     display: flex;
-    border-radius: 3rem;
+    border-radius: 2.4rem;
 }
 #popseabunny1-img img{
     width: 100%;
     height: auto;
-    max-width: 180px;
+    max-width: 170px;
     max-height: 200px;
-    margin-top: 14rem;
-    margin-left: 11.7rem;
-    border-radius: 3rem;
+    margin-top: 14.8rem;
+    margin-left: 12.7rem;
+    border-radius: 2.5rem;
 }
 #popseabunny2-img img{
     width: 100%;
     height: auto;
     max-width: 190px;
     max-height: 200px;
-    margin-top: 16rem;
-    margin-left: 0;
-    border-radius: 3rem;
+    margin-top: 17rem;
+    margin-left: 0.4rem;
+    border-radius: 2.5rem;
 }
 
 
