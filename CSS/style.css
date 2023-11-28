@@ -428,13 +428,13 @@ transform: translate(-2rem, 49.1rem);
 }
 
 .p3-rockleft{
-    width: 60%;
-    height: 65rem;
-    transform: translate(0, -3rem);
+    width: 30%;
+    height: 40rem;
+    transform: translate(0, 6rem);
 }    
 .pg3-rock{
-    transform: translate(30rem, -6rem);
-    min-width: 70%;
+    transform: translate(48rem, 5rem);
+    width: 50%;
 }
     
 .pg3-bottom{
@@ -445,21 +445,26 @@ transform: translate(-2rem, 49.1rem);
 }
     
 .p3-coral1{
-    transform: translate(40rem, -6.8rem);
+    width: 10%;
+    height: auto;
+    transform: translate(65rem, -6rem);
 } 
 .p3-coral2{
-    min-width: 60%;
+    width: 20%;
     transform: translate(-1rem, -2rem);
 }
 .p3-coral3{
-    min-width: 60%;
-    transform: translate(-8rem, 5rem);
+    width: 14%;
+    transform: translate(40rem, 12rem);
 }  
-.p4-coral4{
-    min-width: 50%;
-    transform: translate(-1rem, -9rem);
+.p3-coral4{
+    width: 20%;
+    transform: translate(-1rem, 16rem);
 }
-
+.p3-coral5{
+width: 8%;
+transform: translate(20rem, 15rem);
+}
 /* .mow, .mow-center{
     width: 30% ;
     transform: translate(50%, -50%);
@@ -569,7 +574,20 @@ transform: translate(-2rem, 49.1rem);
     transform: translate(0, 22rem);
 }
 
+.tap, .tap img {
+    width: 6%;
+}
 
+#tap-mow img {
+    transform: translate(35rem, -40rem);
+    opacity: 0;
+    transition: opacity 0.5s;
+
+}
+
+.fade-in {
+    opacity: 1 !important; /* Ensure the fade-in class overrides opacity: 0 */
+}
 /* PAGE 4 */
 
 .c-squid{

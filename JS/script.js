@@ -245,3 +245,31 @@ function closeFGurnardPopup() {
   var popup = document.getElementById("popupContent-FGurnard");
   popup.style.display = "none";
 }
+
+document.addEventListener('DOMContentLoaded', function () {
+  let timeoutId;
+
+  function startAnimation() {
+      const tapImg = document.querySelector('#tap-mow img');
+      
+      // Reset animation by removing and adding the fade-in class
+      tapImg.classList.remove('fade-in');
+      setTimeout(() => tapImg.classList.add('fade-in'), 10);
+  }
+
+  function resetAnimation() {
+      document.querySelector('#tap-mow img').classList.remove('fade-in');
+  }
+
+  function handleMouseMove() {
+      resetAnimation();
+      clearTimeout(timeoutId);
+      timeoutId = setTimeout(startAnimation, 3000); // 3000 milliseconds = 3 seconds
+  }
+
+  // Listen for mousemove events
+  document.addEventListener('mousemove', handleMouseMove);
+
+  // Initial animation start after a delay
+  setTimeout(startAnimation, 1000); // Delayed start to allow the animation to be visible initially
+});
