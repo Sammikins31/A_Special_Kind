@@ -31,7 +31,7 @@ window.addEventListener('scroll', throttle(() => {
 //     let value = window.scrollY;
 
     // logo scroll behind
-    logoText.style.transform = `translateY(${value * 1.5}px)`;
+    logoText.style.transform = `translateY(${value * 1.3}px)`;
     // bubbles move to top when scrolled
     bubbles.style.transform = `translateY(${value * -1.5}px)`;
     rockLeft.style.transform = `translateX(${value * -1}px)`;
@@ -245,31 +245,86 @@ function closeFGurnardPopup() {
   var popup = document.getElementById("popupContent-FGurnard");
   popup.style.display = "none";
 }
-
+function toggleCSquidPopUp() {
+  var popup = document.getElementById("popupContent-cSquid");
+  popup.style.display = popup.style.display === "none" ? "block" : "none";
+}
+function closeCSquidPopup() {
+  var popup = document.getElementById("popupContent-cSquid");
+  popup.style.display = "none";
+}
+function toggleOreoPopUp() {
+  var popup = document.getElementById("popupContent-Oreo");
+  popup.style.display = popup.style.display === "none" ? "block" : "none";
+}
+function closeOreoPopup() {
+  var popup = document.getElementById("popupContent-Oreo");
+  popup.style.display = "none";
+}
+function toggleSeaAngelPopUp() {
+  var popup = document.getElementById("popupContent-SeaAngel");
+  popup.style.display = popup.style.display === "none" ? "block" : "none";
+}
+function closeSeaAngelPopup() {
+  var popup = document.getElementById("popupContent-SeaAngel");
+  popup.style.display = "none";
+}
+function toggleSnipeEelPopUp() {
+  var popup = document.getElementById("popupContent-SnipeEel");
+  popup.style.display = popup.style.display === "none" ? "block" : "none";
+}
+function closeSnipeEelPopup() {
+  var popup = document.getElementById("popupContent-SnipeEel");
+  popup.style.display = "none";
+}
+function toggleCoelacanthPopUp() {
+  var popup = document.getElementById("popupContent-Coelacanth");
+  popup.style.display = popup.style.display === "none" ? "block" : "none";
+}
+function closeCoelacanthPopup() {
+  var popup = document.getElementById("popupContent-Coelacanth");
+  popup.style.display = "none";
+}
+function toggleOstracodPopUp() {
+  var popup = document.getElementById("popupContent-Ostracod");
+  popup.style.display = popup.style.display === "none" ? "block" : "none";
+}
+function closeOstracodPopup() {
+  var popup = document.getElementById("popupContent-Ostracod");
+  popup.style.display = "none";
+}
+// Tap icon
 document.addEventListener('DOMContentLoaded', function () {
   let timeoutId;
+ 
+  // Select all images
+  const tapImgs = document.querySelectorAll('#tap-mow img, #tap-seasheep img, #tap-instructions-text');
 
+ 
   function startAnimation() {
-      const tapImg = document.querySelector('#tap-mow img');
-      
-      // Reset animation by removing and adding the fade-in class
-      tapImg.classList.remove('fade-in');
-      setTimeout(() => tapImg.classList.add('fade-in'), 10);
+      tapImgs.forEach(tapImg => {
+          tapImg.classList.remove('fade-in');
+          setTimeout(() => tapImg.classList.add('fade-in'), 10);
+      });
   }
-
+ 
   function resetAnimation() {
-      document.querySelector('#tap-mow img').classList.remove('fade-in');
+      tapImgs.forEach(tapImg => {
+          tapImg.classList.remove('fade-in');
+      });
   }
-
+ 
   function handleMouseMove() {
       resetAnimation();
       clearTimeout(timeoutId);
       timeoutId = setTimeout(startAnimation, 3000); // 3000 milliseconds = 3 seconds
   }
-
+ 
   // Listen for mousemove events
   document.addEventListener('mousemove', handleMouseMove);
-
+ 
   // Initial animation start after a delay
   setTimeout(startAnimation, 1000); // Delayed start to allow the animation to be visible initially
-});
+ });
+ 
+ 

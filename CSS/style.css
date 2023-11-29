@@ -465,25 +465,9 @@ transform: translate(-2rem, 49.1rem);
 width: 8%;
 transform: translate(20rem, 15rem);
 }
-/* .mow, .mow-center{
-    width: 30% ;
-    transform: translate(50%, -50%);
-    position: relative;
-    z-index: 0;
-}  */
 
-.sb-white{
-    width: 18%;
-    transform: translate(69rem, -5rem);
-}
-.sb-yellow{
-    width: 18%;
-    transform: translate(62rem, 1rem);
-}
-.flying-gurnard{
-    width: 28%;
-    transform: translate(50rem, 16rem);
-}
+
+
     
 /* .magnifier-container{
     width: 100px;
@@ -584,34 +568,61 @@ transform: translate(20rem, 15rem);
     transition: opacity 0.5s;
 
 }
+/* PAGE 3 TAP */
+#tap-seasheep img{
+    width: 4.6em;
+    transform: translate(1rem, -35rem);
+    opacity: 0;
+    transition: opacity 0.5s;
+
+}
+#tap-seabunnyY img{
+    width: 4.6em;
+    transform: translate(65rem, -24.5rem);
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+#tap-seabunnyw img{
+    width: 4.6em;
+    transform: translate(77rem, -25rem);
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+#tap-fgurnard img{
+    width: 6rem;
+    transform: translate(53rem, -10rem);
+    opacity: 0;
+    transition: opacity 0.5s
+}
+#tap-instructions-text{
+    transform: translate(25rem, -25rem);
+    color: white;
+    font-size: 50px;
+    opacity: 0;
+    transition: opacity 0.5s;
+    /* make sectence in one singular line */
+    white-space: nowrap;
+}
 
 .fade-in {
     opacity: 1 !important; /* Ensure the fade-in class overrides opacity: 0 */
 }
 /* PAGE 4 */
 
-.c-squid{
-    width: 30%;
-    opacity: 0.9;
-    transform: scaleX(-1);
-    top: 1%;
-}
-.oreo{
-    width: 10%;
-    transform: translate(68rem, -3rem);
-}
 
-.s-angel, 
-.sa-left,
-.sa-right{
-    width: 27%;
-    transform: translate(0, 17rem);
+.pg4-topL{
+    width: 110%;
+    transform: translate(-1rem, -3.7rem);
+}
+.pg4-topR{
+    width: 110%;
+    transform: translate(-2.5rem, -3.7rem);
 }
 
 /* PAGE 5 */
 .g-o{
     width: 15%;
-    transform: translate(70rem, -20rem);
+    transform: translate(70rem, -9rem);
 }
 
 .j-squid{
@@ -718,7 +729,7 @@ transform: translate(20rem, 15rem);
 }
 
 .slide-pg4 {
-    background: linear-gradient(#2e7fe2, #000000,#3142a1 );
+    background: linear-gradient(#73bfc1, #043277,#3142a1 );
 }
 
 .slide-pg5 {
@@ -734,7 +745,7 @@ transform: translate(20rem, 15rem);
 
 /* TOOLTIP */
 
-.tooltip-mow, .tooltip-seasheep, .tooltip-seabunny, .tooltip-fgurnard {
+.tooltip-mow, .tooltip-seasheep, .tooltip-seabunny, .tooltip-fgurnard, .tooltip-cSquid, .tooltip-oreo, .tooltip-seaangel, .tooltip-snipeeel, .tooltip-coelacanth, .tooltip-ostracod, .tooltip-jsquid, .tooltip-siphon {
     position: relative;
     display: inline-block;
     border-bottom: 1px dotted black;
@@ -772,13 +783,61 @@ transform: translate(20rem, 15rem);
     margin-top: 9rem;
     margin-left: -6rem;
 }
-
+.tooltip-cSquid .csquid-hover{
+    width: 25rem;
+    height: auto;
+    margin-top: -19rem;
+    transform: scaleX(-1);
+    margin-left: -33rem;
+}
+.tooltip-oreo .oreo-hover{
+    width: 8rem;
+    height: auto;
+    margin-top: -9rem;
+    margin-left: 24rem;
+}
+.tooltip-seaangel .seaangel-hover{
+    width: 7rem;
+    height: auto;
+    margin-top: 1rem;
+    margin-left: -39rem;
+}
+.tooltip-snipeeel .snipeeel-hover{
+    width: 40rem;
+    height: auto;
+    margin-top: -3rem;
+    margin-left: -24rem;
+}
+.tooltip-coelacanth .coelacanth-hover{
+    width: 30rem;
+    height: auto;
+    margin-top: -20rem;
+    margin-left: -37rem;
+}
+.tooltip-ostracod .ostracod-hover{
+    width: 6rem;
+    height: auto;
+    margin-top: 6rem;
+    margin-left: -37rem;
+}
+.tooltip-jsquid .jsquid-hover{
+    width: 15rem;
+    height: auto;
+    margin-top: -20rem;
+    margin-left: 10rem;
+}
+.tooltip-siphon .siphon-hover{
+    width: 65rem;
+    height: auto;
+    margin-top: -50rem;
+    margin-left: -60rem;
+}
 .mow-center{
     width: 9rem;
     margin-top: -18.6rem;
     margin-left: 31.7rem;
 }
-.mow-hover, .seasheep-hover, .seabunny-hover, .fgurnard-hover {
+.mow-hover, .seasheep-hover, .seabunny-hover, .fgurnard-hover, .csquid-hover, .oreo-hover, .seaangel-hover, .snipeeel-hover, .coelacanth-hover, .ostracod-hover, .jsquid-hover, .siphon-hover{
     width: 100px; 
     height: auto;
     cursor: pointer;
@@ -802,8 +861,8 @@ transform: translate(20rem, 15rem);
 }
 
 .tooltip-seasheep .text {
-    bottom: 17rem;
-    left: -45rem;
+    bottom: 15rem;
+    left: -44rem;
     margin-left: -60px;
     position: absolute;
     width: 120px;
@@ -849,6 +908,134 @@ transform: translate(20rem, 15rem);
     opacity: 0; 
     text-transform: capitalize;
 }
+.tooltip-cSquid .text {
+    bottom: 13rem;
+    left: 17rem;
+    margin-left: -36rem;
+    position: absolute;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    z-index: 1;
+    border-radius: 6px;
+    transition: opacity 0.3s; /* Reduced from 3s to 0.3s */
+    opacity: 0; 
+    text-transform: capitalize;
+}
+.tooltip-oreo .text {
+    bottom: 9rem;
+    left: 17rem;
+    margin-left: 7rem;
+    position: absolute;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    z-index: 1;
+    border-radius: 6px;
+    transition: opacity 0.3s; /* Reduced from 3s to 0.3s */
+    opacity: 0; 
+    text-transform: capitalize;
+}
+.tooltip-seaangel .text {
+    bottom: -9rem;
+    left: -30rem;
+    margin-left: 7rem;
+    position: absolute;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    z-index: 1;
+    border-radius: 6px;
+    transition: opacity 0.3s; /* Reduced from 3s to 0.3s */
+    opacity: 0; 
+    text-transform: capitalize;
+}
+.tooltip-snipeeel .text {
+    bottom: -15rem;
+    left: -31rem;
+    margin-left: 40rem;
+    position: absolute;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    z-index: 1;
+    border-radius: 6px;
+    transition: opacity 0.3s; /* Reduced from 3s to 0.3s */
+    opacity: 0; 
+    text-transform: capitalize;
+}
+.tooltip-coelacanth .text{
+    bottom: 11rem;
+    left: -47em;
+    margin-left: 40rem;
+    position: absolute;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    z-index: 1;
+    border-radius: 6px;
+    transition: opacity 0.3s; /* Reduced from 3s to 0.3s */
+    opacity: 0; 
+    text-transform: capitalize;
+}
+.tooltip-ostracod .text{
+    bottom: -5.2rem;
+    left: -83rem;
+    margin-left: 45.4rem;
+    position: absolute;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    z-index: 1;
+    border-radius: 6px;
+    transition: opacity 0.3s; /* Reduced from 3s to 0.3s */
+    opacity: 0; 
+    text-transform: capitalize;
+}
+.tooltip-jsquid .text{
+    bottom: 8rem;
+    left: -83rem;
+    margin-left: 104rem;
+    position: absolute;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    z-index: 1;
+    border-radius: 6px;
+    transition: opacity 0.3s; /* Reduced from 3s to 0.3s */
+    opacity: 0; 
+    text-transform: capitalize;
+}
+.tooltip-siphon .text{
+    bottom: 8rem;
+    left: -63rem;
+    margin-left: 104rem;
+    position: absolute;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    z-index: 1;
+    border-radius: 6px;
+    transition: opacity 0.3s; /* Reduced from 3s to 0.3s */
+    opacity: 1; 
+    text-transform: capitalize;
+}
 /* TOOLTIP ARROW FACING LEFT <--MOW */ 
 .tooltip-mow .text::after {
     position: absolute;
@@ -872,7 +1059,7 @@ transform: translate(20rem, 15rem);
     left: 50%;
     margin-left: -5px;
 }
-
+/* TOOLTIP ARROW FACING DOWN */
 .tooltip-seabunny .text::after {
     position: absolute;
     content: "";
@@ -883,6 +1070,7 @@ transform: translate(20rem, 15rem);
     left: 50%;
     margin-left: -5px;
 }
+/* TOOLTIP ARROW FACING DOWN */
 .tooltip-fgurnard .text::after {
     position: absolute;
     content: "";
@@ -893,7 +1081,86 @@ transform: translate(20rem, 15rem);
     left: 50%;
     margin-left: -5px;
 }
-.tooltip-mow:hover .text, .tooltip-seasheep:hover .text, .tooltip-seabunny:hover .text, .tooltip-fgurnard:hover .text {
+/* TOOLTIP ARROW FACING DOWN */
+.tooltip-cSquid .text::after {
+    position: absolute;
+    content: "";
+    border-style: solid;
+    border-width: 5px;
+    border-color: black transparent transparent transparent;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+}
+/* TOOLTIP ARROW FACING DOWN */
+.tooltip-oreo .text::after {
+    position: absolute;
+    content: "";
+    border-style: solid;
+    border-width: 5px;
+    border-color: black transparent transparent transparent;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    
+    }
+    /* TOOLTIP ARROW FACING LEFT */ 
+    .tooltip-seaangel .text::after {
+        position: absolute;
+        content: "";
+        border-style: solid;
+        border-width: 5px 5px 5px 0; /* Adjusted to create a left-facing arrow */
+        border-color: transparent black transparent transparent; /* Adjusted to set the arrow color */
+        top: 50%;
+        right: 100%; /* Changed from left to right to position the arrow on the left side */
+        margin-top: -5px; /* Centering the arrow vertically */ 
+    }
+    /* TOOLTIP ARROW FACING LEFT */ 
+    .tooltip-snipeeel .text::after {
+        position: absolute;
+        content: "";
+        border-style: solid;
+        border-width: 5px 5px 5px 0; /* Adjusted to create a left-facing arrow */
+        border-color: transparent black transparent transparent; /* Adjusted to set the arrow color */
+        top: 50%;
+        right: 100%; /* Changed from left to right to position the arrow on the left side */
+        margin-top: -5px; /* Centering the arrow vertically */ 
+
+    }
+     /* TOOLTIP ARROW FACING LEFT */ 
+    .tooltip-coelacanth .text::after {
+        position: absolute;
+        content: "";
+        border-style: solid;
+        border-width: 5px 5px 5px 0; /* Adjusted to create a left-facing arrow */
+        border-color: transparent black transparent transparent; /* Adjusted to set the arrow color */
+        top: 50%;
+        right: 100%; /* Changed from left to right to position the arrow on the left side */
+        margin-top: -5px; /* Centering the arrow vertically */ 
+    }
+    /* TOOLTIP ARROW FACING DOWN */
+    .tooltip-ostracod .text::after {
+        position: absolute;
+        content: "";
+        border-style: solid;
+        border-width: 5px;
+        border-color: black transparent transparent transparent;
+        top: 100%;
+        left: 50%;
+        margin-left: -5px;
+        }
+
+        .tooltip-jsquid .text::after {
+            position: absolute;
+            content: "";
+            border-style: solid;
+            border-width: 5px 5px 5px 0; /* Adjusted to create a left-facing arrow */
+            border-color: transparent black transparent transparent; /* Adjusted to set the arrow color */
+            top: 50%;
+            right: 100%; /* Changed from left to right to position the arrow on the left side */
+            margin-top: -5px; /* Centering the arrow vertically */ 
+        }
+.tooltip-mow:hover .text, .tooltip-seasheep:hover .text, .tooltip-seabunny:hover .text, .tooltip-fgurnard:hover .text, .tooltip-cSquid:hover .text, .tooltip-oreo:hover .text, .tooltip-seaangel:hover .text, .tooltip-snipeeel:hover .text, .tooltip-coelacanth:hover .text, .tooltip-ostracod:hover .text, .tooltip-jsquid:hover .text {
     opacity: 1;
 }
 
@@ -940,6 +1207,7 @@ transform: translate(20rem, 15rem);
     left: 50%;
     transform: translate(-50%, -12rem);
 }
+
 
 .popup-header {
     display: flex;
@@ -1005,7 +1273,13 @@ transform: translate(20rem, 15rem);
     margin-left: 0.4rem;
     border-radius: 2.5rem;
 }
-
+#pop-fgurnard-img img{
+    width: 100%;
+    max-width: 11rem;
+    margin-top: 17.6rem;
+    margin-left: 12rem;
+    border-radius: 2rem;
+}
 
 #note{
     text-align: right;
@@ -1145,4 +1419,4 @@ transform: translate(20rem, 15rem);
     overflow-x: hidden;
  }
   
-   
+
