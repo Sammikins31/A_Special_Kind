@@ -516,6 +516,13 @@ transform: translate(20rem, 15rem);
     transition: transform 0.1s ease-out;
     transform-origin: top left;
 } */
+.w-swimming{
+    width: 20%;
+    /* transform: rotate(70deg); */
+   margin-left: -10rem;
+   margin-top: -2rem;
+   position: absolute;    
+}
 
 
 .magnifier-img {
@@ -604,8 +611,68 @@ transform: translate(20rem, 15rem);
     white-space: nowrap;
 }
 
+
 .fade-in {
     opacity: 1 !important; /* Ensure the fade-in class overrides opacity: 0 */
+}
+#pg3-narrative, #p4-narrative, #pg4-narrative2 {
+    position: relative;
+}
+
+#pg3-narrative-text {
+    position: absolute;
+    top: -40rem; /* adjust as needed */
+    left: 70rem; /* adjust as needed */
+    transform: translate(-50%, -50%);
+    color: black;
+    font-size: 20px;
+    opacity: 1;
+    transition: opacity 0.5s;
+    /* make sentence in one singular line */
+    white-space: nowrap;
+    z-index: 2; /* set a higher z-index to bring it in front */
+    background-color: #359381;
+    border-radius: 0.5rem;
+    height: 5rem;
+    padding: 0.5rem;
+    font-family: 'Josefin Sans', sans-serif;
+}
+#pg4-narrative-text {
+    position: absolute;
+    top: 50rem; /* adjust as needed */
+    left: 70rem; /* adjust as needed */
+    transform: translate(-50%, -50%);
+    color: black;
+    font-size: 20px;
+    opacity: 1;
+    transition: opacity 0.5s;
+    /* make sentence in one singular line */
+    white-space: nowrap;
+    z-index: 2; /* set a higher z-index to bring it in front */
+    background-color: #359381;
+    border-radius: 0.5rem;
+    height: 3rem;
+    padding: 0.5rem;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+#pg4-narrative-text2 {
+    position: absolute;
+    top: 80rem; /* adjust as needed */
+    left: -16rem; /* adjust as needed */
+    transform: translate(-50%, -50%);
+    color: black;
+    font-size: 20px;
+    opacity: 1;
+    transition: opacity 0.5s;
+    /* make sentence in one singular line */
+    white-space: nowrap;
+    z-index: 2; /* set a higher z-index to bring it in front */
+    background-color: #359381;
+    border-radius: 0.5rem;
+    height: 3rem;
+    padding: 0.5rem;
+    font-family: 'Josefin Sans', sans-serif;
 }
 /* PAGE 4 */
 
@@ -817,19 +884,32 @@ transform: translate(20rem, 15rem);
 .tooltip-ostracod .ostracod-hover{
     width: 6rem;
     height: auto;
-    margin-top: 6rem;
-    margin-left: -37rem;
+    margin-top: -13rem;
+    margin-left: 8rem;
 }
 .tooltip-jsquid .jsquid-hover{
     width: 15rem;
     height: auto;
-    margin-top: -20rem;
-    margin-left: 10rem;
+    margin-top: -3rem;
+    margin-left: -40rem;
 }
+.sparkle{
+
+    width: 12%;
+    /* height: 80rem; */
+    margin-left: 15rem;
+    margin-top: 16rem;
+    filter: brightness(5);
+    animation: fadeInOut 2s infinite;
+}
+.sparkle:hover {
+    cursor: pointer;
+}
+
 .tooltip-siphon .siphon-hover{
     width: 65rem;
     height: auto;
-    margin-top: -50rem;
+    margin-top: -52rem;
     margin-left: -60rem;
 }
 .mow-center{
@@ -989,8 +1069,8 @@ transform: translate(20rem, 15rem);
     text-transform: capitalize;
 }
 .tooltip-ostracod .text{
-    bottom: -5.2rem;
-    left: -83rem;
+    bottom: 14rem;
+    left: -38rem;
     margin-left: 45.4rem;
     position: absolute;
     width: 120px;
@@ -1005,8 +1085,8 @@ transform: translate(20rem, 15rem);
     text-transform: capitalize;
 }
 .tooltip-jsquid .text{
-    bottom: 8rem;
-    left: -83rem;
+    bottom:-9rem;
+    left: -133rem;
     margin-left: 104rem;
     position: absolute;
     width: 120px;
@@ -1021,9 +1101,9 @@ transform: translate(20rem, 15rem);
     text-transform: capitalize;
 }
 .tooltip-siphon .text{
-    bottom: 8rem;
-    left: -63rem;
-    margin-left: 104rem;
+    bottom: 36rem;
+    left: -65rem;
+    margin-left: 9rem;
     position: absolute;
     width: 120px;
     background-color: black;
@@ -1033,7 +1113,7 @@ transform: translate(20rem, 15rem);
     z-index: 1;
     border-radius: 6px;
     transition: opacity 0.3s; /* Reduced from 3s to 0.3s */
-    opacity: 1; 
+    opacity: 0; 
     text-transform: capitalize;
 }
 /* TOOLTIP ARROW FACING LEFT <--MOW */ 
@@ -1160,7 +1240,18 @@ transform: translate(20rem, 15rem);
             right: 100%; /* Changed from left to right to position the arrow on the left side */
             margin-top: -5px; /* Centering the arrow vertically */ 
         }
-.tooltip-mow:hover .text, .tooltip-seasheep:hover .text, .tooltip-seabunny:hover .text, .tooltip-fgurnard:hover .text, .tooltip-cSquid:hover .text, .tooltip-oreo:hover .text, .tooltip-seaangel:hover .text, .tooltip-snipeeel:hover .text, .tooltip-coelacanth:hover .text, .tooltip-ostracod:hover .text, .tooltip-jsquid:hover .text {
+
+        .tooltip-siphon .text::after {
+            position: absolute;
+            content: "";
+            border-style: solid;
+            border-width: 5px;
+            border-color: black transparent transparent transparent;
+            top: 100%;
+            left: 50%;
+            margin-left: -5px;
+        }
+.tooltip-mow:hover .text, .tooltip-seasheep:hover .text, .tooltip-seabunny:hover .text, .tooltip-fgurnard:hover .text, .tooltip-cSquid:hover .text, .tooltip-oreo:hover .text, .tooltip-seaangel:hover .text, .tooltip-snipeeel:hover .text, .tooltip-coelacanth:hover .text, .tooltip-ostracod:hover .text, .tooltip-jsquid:hover .text, .tooltip-siphon:hover .text {
     opacity: 1;
 }
 

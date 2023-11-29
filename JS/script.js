@@ -6,6 +6,7 @@ let bully1 = document.querySelector('.bully1');
 let bully3 = document.querySelector('.bully3');
 let herman = document.querySelector('.herman');
 let underwater = document.querySelector('.underwater');
+let wSwimming = document.querySelector('wswimming');
 
 
 const horizontals = document.querySelectorAll('.section--horizontal');
@@ -45,11 +46,15 @@ window.addEventListener('scroll', throttle(() => {
    bully1.style.left = scrollPosition * 0.10 + 'px';
    bully3.style.left = scrollPosition * -0.1 + 'px';
    herman.style.left = scrollPosition * 0.1 + 'px';
-   underwater.style.transform = `translateY(${value * -0.5}px)`;
 
-}, 16));
  
+let wSwimming = document.querySelector('.w-swimming');
+wSwimming.style.left = scrollPosition * 0.10 + 'px';
 
+underwater.style.transform = `translateY(${value * -0.5}px)`;
+}, 16));
+
+ 
 // <!-- ==================== HORIZONTAL & VERTICAL SCROLLS =================================== -->
 
 // const horizontals = document.querySelectorAll('.section--horizontal');
@@ -207,7 +212,16 @@ btn2.addEventListener('click', function() {
     
     // Magnifier glass
    
- 
+    // const sparkleTooltipTrigger = document.getElementById('sparkleTooltipTrigger');
+    // const jsquidTooltip = document.querySelector('.tooltip-jsquid .text');
+    
+    // sparkleTooltipTrigger.addEventListener('mouseover', () => {
+    //     jsquidTooltip.style.opacity = '1';
+    // });
+    
+    // sparkleTooltipTrigger.addEventListener('mouseout', () => {
+    //     jsquidTooltip.style.opacity = '0';
+    // });
 
 // Pop Up Content
 function toggleMOWPopup() {
@@ -293,6 +307,44 @@ function closeOstracodPopup() {
   var popup = document.getElementById("popupContent-Ostracod");
   popup.style.display = "none";
 }
+function toggleOstracodPopUp() {
+  var popup = document.getElementById("popupContent-Ostracod");
+  popup.style.display = popup.style.display === "none" ? "block" : "none";
+}
+function closeOstracodPopup() {
+  var popup = document.getElementById("popupContent-Ostracod");
+  popup.style.display = "none";
+}
+function toggleJSquidPopUp() {
+  var popup = document.getElementById("popupContent-JSquid");
+  popup.style.display = popup.style.display === "none" ? "block" : "none";
+}
+
+function closeJSquidPopup() {
+  var popup = document.getElementById("popupContent-JSquid");
+  popup.style.display = "none";
+}
+function toggleSiphonPopUp() {
+  var popup = document.getElementById("popupContent-Siphon");
+  popup.style.display = popup.style.display === "none" ? "block" : "none";
+}
+function closeSiphonPopup() {
+  var popup = document.getElementById("popupContent-Siphon");
+  popup.style.display = "none";
+}
+
+const sparkleTooltipTrigger = document.getElementById('sparkleTooltipTrigger');
+const jsquidTooltip = document.querySelector('.tooltip-jsquid .text');
+
+sparkleTooltipTrigger.addEventListener('mouseover', () => {
+  jsquidTooltip.style.opacity = '1';
+});
+sparkleTooltipTrigger.addEventListener('click', toggleJSquidPopUp);
+
+sparkleTooltipTrigger.addEventListener('mouseout', () => {
+  jsquidTooltip.style.opacity = '0';
+});
+
 // Tap icon
 document.addEventListener('DOMContentLoaded', function () {
   let timeoutId;
@@ -327,4 +379,5 @@ document.addEventListener('DOMContentLoaded', function () {
   setTimeout(startAnimation, 1000); // Delayed start to allow the animation to be visible initially
  });
  
- 
+
+
