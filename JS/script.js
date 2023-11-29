@@ -324,13 +324,14 @@ function closeJSquidPopup() {
   var popup = document.getElementById("popupContent-JSquid");
   popup.style.display = "none";
 }
-function toggleSiphonPopUp() {
-  var popup = document.getElementById("popupContent-Siphon");
-  popup.style.display = popup.style.display === "none" ? "block" : "none";
+function toggleSiphonophorePopUp() {
+  var popup = document.getElementById('popupContent-Siphon');
+  popup.style.display = (popup.style.display === 'none' || popup.style.display === '') ? 'block' : 'none';
 }
-function closeSiphonPopup() {
-  var popup = document.getElementById("popupContent-Siphon");
-  popup.style.display = "none";
+
+function closeSiphonophorePopup() {
+  var popup = document.getElementById('popupContent-Siphon');
+  popup.style.display = 'none';
 }
 
 const sparkleTooltipTrigger = document.getElementById('sparkleTooltipTrigger');

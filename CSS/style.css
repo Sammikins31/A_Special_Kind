@@ -561,6 +561,7 @@ transform: translate(20rem, 15rem);
   }
 
 
+
 .p3-bottom{
     transform: translate(0, 22rem);
 }
@@ -615,15 +616,20 @@ transform: translate(20rem, 15rem);
 .fade-in {
     opacity: 1 !important; /* Ensure the fade-in class overrides opacity: 0 */
 }
-#pg3-narrative, #p4-narrative, #pg4-narrative2 {
+#p4-narrative, #pg4-narrative2 {
     position: relative;
+    page-break-inside: avoid;
+}
+#p3-narrative{
+    position: fixed;
+    page-break-inside: avoid;
 }
 
 #pg3-narrative-text {
     position: absolute;
     top: -40rem; /* adjust as needed */
     left: 70rem; /* adjust as needed */
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -75%);
     color: black;
     font-size: 20px;
     opacity: 1;
@@ -636,12 +642,15 @@ transform: translate(20rem, 15rem);
     height: 5rem;
     padding: 0.5rem;
     font-family: 'Josefin Sans', sans-serif;
+    page-break-inside: avoid;
+    
+
 }
 #pg4-narrative-text {
     position: absolute;
     top: 50rem; /* adjust as needed */
     left: 70rem; /* adjust as needed */
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -58%);
     color: black;
     font-size: 20px;
     opacity: 1;
@@ -651,7 +660,7 @@ transform: translate(20rem, 15rem);
     z-index: 2; /* set a higher z-index to bring it in front */
     background-color: #359381;
     border-radius: 0.5rem;
-    height: 3rem;
+    height: 4.2rem;
     padding: 0.5rem;
     font-family: 'Josefin Sans', sans-serif;
 }
@@ -659,7 +668,7 @@ transform: translate(20rem, 15rem);
 #pg4-narrative-text2 {
     position: absolute;
     top: 80rem; /* adjust as needed */
-    left: -16rem; /* adjust as needed */
+    left: -14rem; /* adjust as needed */
     transform: translate(-50%, -50%);
     color: black;
     font-size: 20px;
@@ -864,10 +873,10 @@ transform: translate(20rem, 15rem);
     margin-left: 24rem;
 }
 .tooltip-seaangel .seaangel-hover{
-    width: 7rem;
+    width: 11rem;
     height: auto;
     margin-top: 1rem;
-    margin-left: -39rem;
+    margin-left: -43rem;
 }
 .tooltip-snipeeel .snipeeel-hover{
     width: 40rem;
@@ -1021,9 +1030,9 @@ transform: translate(20rem, 15rem);
     text-transform: capitalize;
 }
 .tooltip-seaangel .text {
-    bottom: -9rem;
+    bottom: -10rem;
     left: -30rem;
-    margin-left: 7rem;
+    margin-left: -4rem;
     position: absolute;
     width: 120px;
     background-color: black;
@@ -1298,8 +1307,62 @@ transform: translate(20rem, 15rem);
     left: 50%;
     transform: translate(-50%, -12rem);
 }
-
-
+#popupContent-cSquid {
+    width: 25%;
+    height: 65%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -12rem);
+}
+#popupContent-Oreo{
+    width: 25%;
+    height: 65%;
+    top: 50%;
+    left: 60%;
+    transform: translate(-50%, -12rem);
+}
+#popupContent-SeaAngel{
+    width: 25%;
+    height: 65%;
+    top: 59%;
+    left: 30%;
+    transform: translate(-50%, -12rem);
+}
+#popupContent-SnipeEel{
+    width: 25%;
+    height: 65%;
+    top: 52%;
+    left: 80%;
+    transform: translate(-50%, -12rem);
+}
+#popupContent-Coelacanth{
+    width: 25%;
+    height: 65%;
+    top: 52%;
+    left: 40%;
+    transform: translate(-50%, -12rem);
+}
+#popupContent-JSquid{
+    width: 25%;
+    height: 70%;
+    top: 50%;
+    left: 40%;
+    transform: translate(-50%, -12rem);
+}
+#popupContent-Ostracod{
+    width: 25%;
+    height: 55%;
+    top: 50%;
+    left: 60%;
+    transform: translate(-50%, -12rem);
+}
+#popupContent-Siphon{
+    width: 25%;
+    height: 55%;
+    top: 50%;
+    left: 60%;
+    transform: translate(-10%, -12rem);
+}
 .popup-header {
     display: flex;
     justify-content: space-between;
@@ -1371,7 +1434,107 @@ transform: translate(20rem, 15rem);
     margin-left: 12rem;
     border-radius: 2rem;
 }
+#pop-cSquidg-img img{
+    width: 100%;
+    max-width: 10rem;
+    margin-top: 18.8rem;
+    margin-left: 13.4rem;
+    border-radius: 2rem;
+}
 
+#pop-cSquid-img img{
+    width: 100%;
+    max-width: 13rem;
+    border-radius: 2rem;
+    margin-top: 18rem;
+    margin-left: 0.20rem;
+}
+#poporeo-img img{
+    width: 100%;
+    max-width: 13rem;
+    border-radius: 2rem;
+    margin-top: 17rem;
+    margin-left: 1rem;
+}
+
+#popoxoreo-img img{
+    width: 100%;
+    max-width: 8rem;
+    margin-top: 15.5rem;
+    margin-left: 15rem;
+    border-radius: 2rem;
+}
+#popseaangel-img img{
+    width: 100%;
+    max-width: 7rem;
+    margin-top: 18.3rem;
+    margin-left: 14rem;
+    border-radius: 2rem;
+    
+}
+#popseaangelg-img img{
+    width: 100%;
+    max-width: 10rem;
+    border-radius: 2rem;
+    margin-top: 19.5rem;
+    margin-left: 1rem;
+}
+#popsnipeeel-img img{
+    width: 100%;
+    max-width: 14rem;
+    margin-top: 16rem;
+    margin-left: 6rem;
+    border-radius: 2rem;
+}
+#popcoelacanth-img img{
+    width: 100%;
+    max-width: 12rem;
+    margin-top: 18rem;
+    margin-left: 0.5rem;
+    border-radius: 2rem;
+}
+#popcoelacanthacnh-img img{
+    width: 100%;
+    max-width: 10rem;
+    margin-top: 15.8rem;
+    margin-left: 13rem;
+    border-radius: 1.3rem;
+}
+#popJSquid1-img img{
+    width: 100%;
+    max-width: 6rem;
+    margin-top: 16rem;
+    margin-left: 13rem;
+    border-radius: 1.3rem;
+}
+#popJSquid2-img img{
+    width: 100%;
+    max-width: 7rem;
+    margin-top: 16rem;
+    margin-left: 4rem;
+    border-radius: 2rem;
+}
+#popostracod1-img img{
+    width: 100%;
+    max-width: 12rem;
+    margin-top: 13.5rem;
+    margin-left: 2rem;
+    border-radius: 1.3rem;
+}
+#popOstracod2-img img{
+    width: 100%;
+    max-width: 6rem;
+    margin-top: 12rem;
+    margin-left: 15rem;
+    border-radius: 2rem;
+}
+#popsiphon-img img{
+    width: 100%;
+    max-width: 14rem;
+    margin-top: 15rem;
+    margin-left: 5rem;
+    border-radius: 2rem;
+}
 #note{
     text-align: right;
     margin-top: 2rem;
@@ -1389,7 +1552,49 @@ transform: translate(20rem, 15rem);
     font-weight: bold;
 }
 
-
+#wyatt-zone img{
+    position: absolute;
+    display: flex;
+    margin-top: -18em;
+    margin-left: 70rem;
+    
+    transform: scaleX(-1);
+    width: 18rem;
+}
+#herman-zone img{
+    position: absolute;
+    display: flex;
+    width: 18rem;
+    transform: translate(0, -14rem);
+}
+#Twilight-zone img {
+    width: 20%; 
+    height: auto;
+    transform: translate(70rem, -22rem); 
+}
+#Midight-zone img{
+    width: 20%;
+    height: auto;
+    transform: translate(0, -22rem);
+}
+#size-chart{
+    transform: translate(-12rem, -16rem);
+}
+#hand-guide img {
+    width: 50rem; 
+    height: auto;
+    transform: translate(140rem, -18rem)
+}
+#ending-words{
+    font-size: 17px;
+    transform: translate(15rem,-24rem);
+    
+}
+#ending img{
+    width: 14%;
+    height: auto;
+    transform: translate(98rem, -27rem);
+}
 /* TOOLTIP ARROW FACING RIGHT */
 /* .tooltip .text::after {
     position: absolute;
