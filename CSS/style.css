@@ -1,9 +1,8 @@
+/* rules for overall */
 * {
     box-sizing: border-box;
     margin: 0;
-    padding: 0;
-
-    
+    padding: 0;    
 }
 
 html {
@@ -17,45 +16,33 @@ body {
     max-width: 100vw;
     overflow-x: hidden;
 }
+ /* INDICATOR */
+ .indicator {
+    color: white;
+    text-align: center;
+    position: absolute;
+    bottom: 12rem;
+    left: 50%;
+    transform: translate3d(-50%, 0, 0);
+    font-size: 1.2rem;
+    span {
+        display: block;
 
-header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 30px 100px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 100;
-    height: 10vh;
+        &:nth-child(2) {
+            animation: arrowMove 600ms infinite alternate;
+        }
+    }
 }
 
 img {
     width: 50vw;
 }
-
-/* ==================== TITLE PAGE - DON'T TOUCH ! =============================== */
+/* ==================== TITLE PAGE - PARALLAX =============================== */
 .logo {
     font-size: 2em;
     pointer-events: none;
 }
 
-.navigation a {
-    text-decoration: none;
-    color: #359581;
-    padding: 6px 15px;
-    border-radius: 20px;
-    margin: 0 10px;
-    font-weight: 600;
-}
-
-.navigation a:hover,
-.navigation a.active {
-    background: #359381;
-    color: #ffff;
-
-}
 
 .parallax1 {
     position: relative;
@@ -100,15 +87,6 @@ img {
 #bubbles {
     height: 160vh;
 }
-
-/* .wave-left,
-.wave-right {
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-} */
-
 
 
 #rock-left {
@@ -289,7 +267,7 @@ img {
     cursor: pointer;
 }
 
-/* PAGE 2 */
+/* ==================== PAGE 2 =============================== */
 .wyatt2 {
     position: absolute;
     display: flex;
@@ -310,6 +288,13 @@ img {
     width: 46rem;
     height: 32rem;
 }
+.bully-quote1,
+  .bully-quote2,
+  .bully-quote3,
+  .bully-quote4,
+  .bully-quote5{
+    opacity: 1;
+  }
 
 .bully1 {
     position: absolute;
@@ -406,7 +391,7 @@ img {
 }
 
 
-/* Page 3 */
+/* ==================== PAGE 3- PARALLAX =============================== */
 
 .blue-effect{
 min-width: 110%;
@@ -468,14 +453,8 @@ transform: translate(20rem, 15rem);
 
 
 
-    
-/* .magnifier-container{
-    width: 100px;
-    height: 300px;
-    position: absolute;
-    z-index: 9;
-    align-items: center;
-} */
+    /* ==================== MAGNIFIER- DRAGGABLE OBJECT =============================== */
+    /* NOTE: MAGNIFYING (ZOOM) NOT WORKING, JUST DRAG */
 .magnifier{
    cursor: move;
     z-index: 10;
@@ -486,12 +465,11 @@ transform: translate(20rem, 15rem);
     user-select: none;
     overflow: hidden;
 }
-/* .image-container {
-    position: relative;
-    display: inline-block;
-  } */
+
+/* Created a magnifying glass effect - failed to achieve a magnify zoom effect */
+
 .magnifying-glass{
-    background-color: rgba(255, 255, 255, 0.5); /* Adjust the color and transparency as needed */
+    background-color: rgba(255, 255, 255, 0.5); 
     border-radius: 50%;
     position: absolute;
     width: 45%;
@@ -503,11 +481,26 @@ transform: translate(20rem, 15rem);
     pointer-events: none;
     transform-origin: center center;
     transition: transform 0.2s ease;    
-    border: 2px solid #333; /* Magnifying glass border color */
+    border: 2px solid #333; 
     cursor: zoom-in;
-    background-size: 300% 300%; /* Initial background size for zoom effect */
+    /* Initial background size for zoom effect */
+    background-size: 300% 300%; 
 }
+/* Magnifying glass lens */
+#lens{
+    position: absolute;
+    border: 2px solid grey;
+    border-radius: 50%;
+    overflow: hidden;
+    cursor:none;
+    box-shadow: inset 0 0 10px 2px grey;
+    filter: drop-shadow(0 0 2px grey);
+    & > *{
+        cursor:none;
+    }
+  }
 
+/* FAILED ATTEMPT CODE */
 /* .zoomed-image {
         width: 200%;
         height: 200%;
@@ -516,35 +509,26 @@ transform: translate(20rem, 15rem);
     transition: transform 0.1s ease-out;
     transform-origin: top left;
 } */
+/* .magnifying-glass:hover {
+    transform: scale(1.5); 
+} */
+
 .w-swimming{
     width: 20%;
-    /* transform: rotate(70deg); */
    margin-left: -10rem;
    margin-top: -2rem;
    position: absolute;    
 }
-
 
 .magnifier-img {
     width: 100%;
     height: 100%;
     display: block;
 }
-/* .magnifying-glass:hover {
-    transform: scale(1.5); 
-} */
 .magnifier:active {
     cursor: grabbing;
 }
     
-/* .magnifier:hover{
-    cursor: pointer;
-    transition: left 0.2s ease, top 0.2s ease;
-} */
-/* .draggable {
-    position: absolute;
-    cursor: grab;
-} */
     
 .img-magnifier-container {
     position: relative;
@@ -565,7 +549,9 @@ transform: translate(20rem, 15rem);
 .p3-bottom{
     transform: translate(0, 22rem);
 }
+    /* ==================== TAP ICON ANIMATION =============================== */
 
+    /* TAP ICON- EACH CHARACTER IMG RULES */
 .tap, .tap img {
     width: 6%;
 }
@@ -576,7 +562,7 @@ transform: translate(20rem, 15rem);
     transition: opacity 0.5s;
 
 }
-/* PAGE 3 TAP */
+
 #tap-seasheep img{
     width: 4.6em;
     transform: translate(1rem, -35rem);
@@ -608,16 +594,18 @@ transform: translate(20rem, 15rem);
     font-size: 50px;
     opacity: 0;
     transition: opacity 0.5s;
-    /* make sectence in one singular line */
+    /*ensuring it is in one singular line */
     white-space: nowrap;
 }
 
-
+/* Fade in animation for tap icon */
 .fade-in {
-    opacity: 1 !important; /* Ensure the fade-in class overrides opacity: 0 */
+    /* !imporant-> Ensure the fade-in class overrides opacity: 0 */
+    opacity: 1 !important; 
 }
 #p4-narrative, #pg4-narrative2 {
     position: relative;
+    /* Ensures that it doesn't move to another page */
     page-break-inside: avoid;
 }
 #p3-narrative{
@@ -627,8 +615,8 @@ transform: translate(20rem, 15rem);
 
 #pg3-narrative-text {
     position: absolute;
-    top: -40rem; /* adjust as needed */
-    left: 70rem; /* adjust as needed */
+    top: -40rem; 
+    left: 70rem; 
     transform: translate(-50%, -75%);
     color: black;
     font-size: 20px;
@@ -636,7 +624,8 @@ transform: translate(20rem, 15rem);
     transition: opacity 0.5s;
     /* make sentence in one singular line */
     white-space: nowrap;
-    z-index: 2; /* set a higher z-index to bring it in front */
+    /* set a higher z-index to bring it in front to page */
+    z-index: 2; 
     background-color: #359381;
     border-radius: 0.5rem;
     height: 5rem;
@@ -648,16 +637,15 @@ transform: translate(20rem, 15rem);
 }
 #pg4-narrative-text {
     position: absolute;
-    top: 50rem; /* adjust as needed */
-    left: 70rem; /* adjust as needed */
+    top: 50rem; 
+    left: 70rem; 
     transform: translate(-50%, -58%);
     color: black;
     font-size: 20px;
     opacity: 1;
     transition: opacity 0.5s;
-    /* make sentence in one singular line */
     white-space: nowrap;
-    z-index: 2; /* set a higher z-index to bring it in front */
+    z-index: 2; 
     background-color: #359381;
     border-radius: 0.5rem;
     height: 4.2rem;
@@ -667,24 +655,22 @@ transform: translate(20rem, 15rem);
 
 #pg4-narrative-text2 {
     position: absolute;
-    top: 80rem; /* adjust as needed */
-    left: -14rem; /* adjust as needed */
+    top: 80rem;
+    left: -14rem; 
     transform: translate(-50%, -50%);
     color: black;
     font-size: 20px;
     opacity: 1;
     transition: opacity 0.5s;
-    /* make sentence in one singular line */
     white-space: nowrap;
-    z-index: 2; /* set a higher z-index to bring it in front */
+    z-index: 2; 
     background-color: #359381;
     border-radius: 0.5rem;
     height: 3rem;
     padding: 0.5rem;
     font-family: 'Josefin Sans', sans-serif;
 }
-/* PAGE 4 */
-
+ /* ==================== PAGE 4 =============================== */
 
 .pg4-topL{
     width: 110%;
@@ -695,25 +681,7 @@ transform: translate(20rem, 15rem);
     transform: translate(-2.5rem, -3.7rem);
 }
 
-/* PAGE 5 */
-.g-o{
-    width: 15%;
-    transform: translate(70rem, -9rem);
-}
-
-.j-squid{
-    width: 35%;
-    transform: translate(-5rem, -1rem);
-    
-}
-
-.siphon{
-    /* transform: translate(48rem, 10rem); */
-    transform: skewY(10deg);
-    margin-left: 40rem;
-    margin-top: 18rem;
-    width: 56rem;
-}
+ /* ==================== PAGE 5 =============================== */
 
 .container{
     width: 100%;
@@ -723,20 +691,10 @@ transform: translate(20rem, 15rem);
     align-items: center;
     justify-content: center;
   }
-  #lens{
-    position: absolute;
-    border: 2px solid grey;
-    border-radius: 50%;
-    overflow: hidden;
-    cursor:none;
-    box-shadow: inset 0 0 10px 2px grey;
-    filter: drop-shadow(0 0 2px grey);
-    & > *{
-        cursor:none;
-    }
-  }
 
-/* SECTION RULES */
+
+
+ /* ==================== SECTION RULES =============================== */
 .section {
     min-height: 100vh;
     position: relative;
@@ -778,7 +736,8 @@ transform: translate(20rem, 15rem);
     justify-content: center;
 }
 
-/* SLIDES PAGES */
+
+ /* ==================== PAGES =============================== */
 
 .title-page, .page-1, #page2, .page-3, .slide-pg4, .slide-pg5, .page-6{
     min-height: 100vh;
@@ -819,8 +778,10 @@ transform: translate(20rem, 15rem);
     min-width: 100vw;
 }
 
-/* TOOLTIP */
 
+ /* ==================== TOOLTIP (CHARACTER NAME HOVER) =============================== */
+
+/* Selecting all tooltip classes */
 .tooltip-mow, .tooltip-seasheep, .tooltip-seabunny, .tooltip-fgurnard, .tooltip-cSquid, .tooltip-oreo, .tooltip-seaangel, .tooltip-snipeeel, .tooltip-coelacanth, .tooltip-ostracod, .tooltip-jsquid, .tooltip-siphon {
     position: relative;
     display: inline-block;
@@ -829,11 +790,13 @@ transform: translate(20rem, 15rem);
     cursor: pointer;
 }
 
+/* RULES FOR EACH CHARACTER IMAGES WITHIN TOOLLTIP */
+
 .tooltip-mow .mow-hover{
     width: 13rem;
     height: auto;
     margin-top: -22rem;
-    margin-left: -16rem;
+    margin-left: -15rem;
 }
 .tooltip-seasheep .seasheep-hover{
     width: 8rem;
@@ -902,8 +865,15 @@ transform: translate(20rem, 15rem);
     margin-top: -3rem;
     margin-left: -40rem;
 }
-.sparkle{
 
+.tooltip-siphon .siphon-hover{
+    width: 65rem;
+    height: auto;
+    margin-top: -52rem;
+    margin-left: -60rem;
+}
+/* SPARKLE IMG FOR STRAWBERRY / JEWEL SQUID */
+.sparkle{
     width: 12%;
     /* height: 80rem; */
     margin-left: 15rem;
@@ -915,23 +885,32 @@ transform: translate(20rem, 15rem);
     cursor: pointer;
 }
 
-.tooltip-siphon .siphon-hover{
-    width: 65rem;
-    height: auto;
-    margin-top: -52rem;
-    margin-left: -60rem;
-}
 .mow-center{
     width: 9rem;
     margin-top: -18.6rem;
     margin-left: 31.7rem;
 }
-.mow-hover, .seasheep-hover, .seabunny-hover, .fgurnard-hover, .csquid-hover, .oreo-hover, .seaangel-hover, .snipeeel-hover, .coelacanth-hover, .ostracod-hover, .jsquid-hover, .siphon-hover{
+/* TOOLTIP- CHARACTER HOVER RULES */
+.mow-hover, 
+.seasheep-hover, 
+.seabunny-hover, 
+.fgurnard-hover, 
+.csquid-hover, 
+.oreo-hover, 
+.seaangel-hover, 
+.snipeeel-hover, 
+.coelacanth-hover, 
+.ostracod-hover, 
+.jsquid-hover, 
+.siphon-hover{
     width: 100px; 
     height: auto;
     cursor: pointer;
 }
 
+
+ /* ==================== TOOLTIP TEXTS =============================== */
+ /* Shortening this structure will mess up the code so i'm leaving it long */
 .tooltip-mow .text {
     bottom: 16rem;
     left: -2.3rem;
@@ -945,7 +924,7 @@ transform: translate(20rem, 15rem);
     z-index: 1;
     border-radius: 6px;
     transition: opacity 0.3s; 
-    opacity: 0; /* Ensure it's initially hidden */
+    opacity: 0; 
     text-transform: capitalize;
 }
 
@@ -961,8 +940,8 @@ transform: translate(20rem, 15rem);
     padding: 5px 0;
     z-index: 1;
     border-radius: 6px;
-    transition: opacity 0.3s; /* Reduced from 3s to 0.3s */
-    opacity: 0; /* Ensure it's initially hidden */
+    transition: opacity 0.3s; 
+    opacity: 0; 
     text-transform: capitalize;
 }
 .tooltip-seabunny .text {
@@ -977,8 +956,8 @@ transform: translate(20rem, 15rem);
     padding: 5px 0;
     z-index: 1;
     border-radius: 6px;
-    transition: opacity 0.3s; /* Reduced from 3s to 0.3s */
-    opacity: 0; /* Ensure it's initially hidden */
+    transition: opacity 0.3s; 
+    opacity: 0;
     text-transform: capitalize;
 }
 .tooltip-fgurnard .text {
@@ -993,7 +972,7 @@ transform: translate(20rem, 15rem);
     padding: 5px 0;
     z-index: 1;
     border-radius: 6px;
-    transition: opacity 0.3s; /* Reduced from 3s to 0.3s */
+    transition: opacity 0.3s; 
     opacity: 0; 
     text-transform: capitalize;
 }
@@ -1009,7 +988,7 @@ transform: translate(20rem, 15rem);
     padding: 5px 0;
     z-index: 1;
     border-radius: 6px;
-    transition: opacity 0.3s; /* Reduced from 3s to 0.3s */
+    transition: opacity 0.3s; 
     opacity: 0; 
     text-transform: capitalize;
 }
@@ -1025,7 +1004,7 @@ transform: translate(20rem, 15rem);
     padding: 5px 0;
     z-index: 1;
     border-radius: 6px;
-    transition: opacity 0.3s; /* Reduced from 3s to 0.3s */
+    transition: opacity 0.3s; 
     opacity: 0; 
     text-transform: capitalize;
 }
@@ -1041,7 +1020,7 @@ transform: translate(20rem, 15rem);
     padding: 5px 0;
     z-index: 1;
     border-radius: 6px;
-    transition: opacity 0.3s; /* Reduced from 3s to 0.3s */
+    transition: opacity 0.3s; 
     opacity: 0; 
     text-transform: capitalize;
 }
@@ -1057,7 +1036,7 @@ transform: translate(20rem, 15rem);
     padding: 5px 0;
     z-index: 1;
     border-radius: 6px;
-    transition: opacity 0.3s; /* Reduced from 3s to 0.3s */
+    transition: opacity 0.3s; 
     opacity: 0; 
     text-transform: capitalize;
 }
@@ -1073,7 +1052,7 @@ transform: translate(20rem, 15rem);
     padding: 5px 0;
     z-index: 1;
     border-radius: 6px;
-    transition: opacity 0.3s; /* Reduced from 3s to 0.3s */
+    transition: opacity 0.3s; 
     opacity: 0; 
     text-transform: capitalize;
 }
@@ -1089,7 +1068,7 @@ transform: translate(20rem, 15rem);
     padding: 5px 0;
     z-index: 1;
     border-radius: 6px;
-    transition: opacity 0.3s; /* Reduced from 3s to 0.3s */
+    transition: opacity 0.3s; 
     opacity: 0; 
     text-transform: capitalize;
 }
@@ -1105,7 +1084,7 @@ transform: translate(20rem, 15rem);
     padding: 5px 0;
     z-index: 1;
     border-radius: 6px;
-    transition: opacity 0.3s; /* Reduced from 3s to 0.3s */
+    transition: opacity 0.3s; 
     opacity: 0; 
     text-transform: capitalize;
 }
@@ -1121,7 +1100,7 @@ transform: translate(20rem, 15rem);
     padding: 5px 0;
     z-index: 1;
     border-radius: 6px;
-    transition: opacity 0.3s; /* Reduced from 3s to 0.3s */
+    transition: opacity 0.3s; 
     opacity: 0; 
     text-transform: capitalize;
 }
@@ -1130,12 +1109,17 @@ transform: translate(20rem, 15rem);
     position: absolute;
     content: "";
     border-style: solid;
-    border-width: 5px 5px 5px 0; /* Adjusted to create a left-facing arrow */
-    border-color: transparent black transparent transparent; /* Adjusted to set the arrow color */
+     /* Adjusted to create a left-facing arrow */
+    border-width: 5px 5px 5px 0;
+    /*The arrow color */
+    border-color: transparent black transparent transparent; 
     top: 50%;
-    right: 100%; /* Changed from left to right to position the arrow on the left side */
-    margin-top: -5px; /* Centering the arrow vertically */
-    transform: translateY(-50%); /* Centering the arrow vertically in older browsers */
+    /* Changed from left to right to position the arrow on the left side */
+    right: 100%; 
+    /* Centering the arrow vertically */
+    margin-top: -5px; 
+    /* Centering the arrow vertically in older browsers */
+    transform: translateY(-50%); 
 }
 /* TOOLTIP ARROW FACING DOWN */
 .tooltip-seasheep .text::after {
@@ -1198,34 +1182,41 @@ transform: translate(20rem, 15rem);
         position: absolute;
         content: "";
         border-style: solid;
-        border-width: 5px 5px 5px 0; /* Adjusted to create a left-facing arrow */
-        border-color: transparent black transparent transparent; /* Adjusted to set the arrow color */
+        /* Adjusted to create a left-facing arrow */
+        border-width: 5px 5px 5px 0; 
+        /* Adjusted to set the arrow color */
+        border-color: transparent black transparent transparent; 
         top: 50%;
-        right: 100%; /* Changed from left to right to position the arrow on the left side */
-        margin-top: -5px; /* Centering the arrow vertically */ 
+        /* Changed from left to right to position the arrow on the left side */
+        right: 100%; 
+        /* Centering the arrow vertically */ 
+        margin-top: -5px; 
     }
     /* TOOLTIP ARROW FACING LEFT */ 
     .tooltip-snipeeel .text::after {
         position: absolute;
         content: "";
         border-style: solid;
-        border-width: 5px 5px 5px 0; /* Adjusted to create a left-facing arrow */
-        border-color: transparent black transparent transparent; /* Adjusted to set the arrow color */
+        /* Adjusted to create a left-facing arrow */
+        border-width: 5px 5px 5px 0; 
+        /* Adjusted to set the arrow color */
+        border-color: transparent black transparent transparent; 
         top: 50%;
-        right: 100%; /* Changed from left to right to position the arrow on the left side */
-        margin-top: -5px; /* Centering the arrow vertically */ 
-
+        /* Changed from left to right to position the arrow on the left side */
+        right: 100%; 
+        /* Centering the arrow vertically */ 
+        margin-top: -5px; 
     }
      /* TOOLTIP ARROW FACING LEFT */ 
     .tooltip-coelacanth .text::after {
         position: absolute;
         content: "";
         border-style: solid;
-        border-width: 5px 5px 5px 0; /* Adjusted to create a left-facing arrow */
-        border-color: transparent black transparent transparent; /* Adjusted to set the arrow color */
+        border-width: 5px 5px 5px 0; 
+        border-color: transparent black transparent transparent; 
         top: 50%;
-        right: 100%; /* Changed from left to right to position the arrow on the left side */
-        margin-top: -5px; /* Centering the arrow vertically */ 
+        right: 100%; 
+        margin-top: -5px; 
     }
     /* TOOLTIP ARROW FACING DOWN */
     .tooltip-ostracod .text::after {
@@ -1243,11 +1234,11 @@ transform: translate(20rem, 15rem);
             position: absolute;
             content: "";
             border-style: solid;
-            border-width: 5px 5px 5px 0; /* Adjusted to create a left-facing arrow */
-            border-color: transparent black transparent transparent; /* Adjusted to set the arrow color */
+            border-width: 5px 5px 5px 0; 
+            border-color: transparent black transparent transparent; 
             top: 50%;
-            right: 100%; /* Changed from left to right to position the arrow on the left side */
-            margin-top: -5px; /* Centering the arrow vertically */ 
+            right: 100%; 
+            margin-top: -5px; 
         }
 
         .tooltip-siphon .text::after {
@@ -1260,12 +1251,12 @@ transform: translate(20rem, 15rem);
             left: 50%;
             margin-left: -5px;
         }
+      /* ==================== TOOLTIP  HOVER TEXTS =============================== */
 .tooltip-mow:hover .text, .tooltip-seasheep:hover .text, .tooltip-seabunny:hover .text, .tooltip-fgurnard:hover .text, .tooltip-cSquid:hover .text, .tooltip-oreo:hover .text, .tooltip-seaangel:hover .text, .tooltip-snipeeel:hover .text, .tooltip-coelacanth:hover .text, .tooltip-ostracod:hover .text, .tooltip-jsquid:hover .text, .tooltip-siphon:hover .text {
     opacity: 1;
 }
 
-
-/* POP UP */
+/* ==================== POP UP =============================== */
 .popup-container {
     display: none;
     position: fixed;
@@ -1386,7 +1377,7 @@ transform: translate(20rem, 15rem);
     font-style: italic;
     text-align: center;
   }
-
+/* POP UP IMGS */
   #popmow-img img {
     width: 100%; 
     height: auto; 
@@ -1551,7 +1542,7 @@ transform: translate(20rem, 15rem);
     text-decoration: underline;
     font-weight: bold;
 }
-
+/* ==================== PAGE 6- ENDING =============================== */
 #wyatt-zone img{
     position: absolute;
     display: flex;
@@ -1595,49 +1586,8 @@ transform: translate(20rem, 15rem);
     height: auto;
     transform: translate(98rem, -27rem);
 }
-/* TOOLTIP ARROW FACING RIGHT */
-/* .tooltip .text::after {
-    position: absolute;
-    content: "";
-    border-style: solid;
-    border-width: 5px 0 5px 5px; 
-    border-color: transparent transparent transparent black;
-    top: 50%;
-    left: 100%;
-    margin-top: -5px; 
-    transform: translateY(-50%); 
-} */
 
-
-
-/* TOOLTIP ARROW FACING DOWN */
-/* .tooltip .text::after {
-    position: absolute;
-    content: "";
-    border-style: solid;
-    border-width: 5px;
-    border-color: black transparent transparent transparent;
-    top: 100%;
-    left: 50%;
-    margin-left: -5px;
-} */
-
-
-   
-
-
-
-
-.yellow_fish {
-    width: 16vw;
-    height: 30vh;
-}
-
-
-
-
-
-
+/* keyframes */
 @keyframes fadeIn {
     0% {
         opacity: 0;
@@ -1648,13 +1598,6 @@ transform: translate(20rem, 15rem);
     }
   }
   
-  .bully-quote1,
-  .bully-quote2,
-  .bully-quote3,
-  .bully-quote4,
-  .bully-quote5{
-    opacity: 1;
-  }
   
 
 @keyframes fadeInOut {
@@ -1671,48 +1614,12 @@ transform: translate(20rem, 15rem);
     }
 }
 
-.indicator {
-    color: white;
-    text-align: center;
-    position: absolute;
-    bottom: 12rem;
-    left: 50%;
-    transform: translate3d(-50%, 0, 0);
-    font-size: 1.2rem;
-    span {
-        display: block;
-
-        &:nth-child(2) {
-            animation: arrowMove 600ms infinite alternate;
-        }
-    }
-}
 
  
-
 @media (max-width: 600px) {
     body {
         font-size: 18px;
     }
-    .logo {
-        font-size: 1.5em;
-    }
-    .navigation a {
-        padding: 4px 10px;
-    }
- }
- 
- 
- @media (max-width: 600px) {
-    .navigation {
-        flex-direction: column;
-    }
- }
- img {
-    width: 50vw;
- }
- body {
-    overflow-x: hidden;
- }
-  
+}
+
 

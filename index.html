@@ -15,28 +15,31 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
+
     <!-- JS -->
+    <!-- External JavaScript files with defer attribute -->
     <script src="js/script.js" defer></script>
-    <script src="test.js" defer></script>
 </head>
 
 <body>
-
-    <!-- ==================== HEADER =================================== -->
-    <!-- Placed on top of webpage and it is unscrollable so it is visible on all pages for navigation -->
    
-
     <!-- ==================== TITLE PAGE =================================== -->
-    <!-- Each page will be separated within sections -->
-    <section id="title-page">
-        <!-- To make a parallax section container for title page -->
+    <!-- Each page are separated within sections -->
+    <section id="title-page">   
+        
+        <!-- Parallax container for the title page -->
         <section class="parallax1">
+
+            <!-- Title and decorative images -->
             <h2 id="logo-text">A Special Kind</h2>
             <img src="images/bubblerr1.png" id="bubbles">
             <img src="images/rock3.png" id="rock-left">
             <img src="images/wave-bkg1.png" id="wave-right">
-            <!-- A button for user to click from the title page to go to next page without needing to scroll -->
+
+             <!-- Button to navigate to the next page without needing to scroll -->
             <a href="#pg1" id="btn">Start Journey</a>
+
+              <!-- Scroll indicator -->
             <!-- An indicator is a navigational symbol tool to instruct user on needing to scroll to go to next page without using much context -->
             <div class="indicator">
                 <span>Scroll</span>
@@ -60,7 +63,11 @@
                     <div class="slides">
 
                         <!-- =============== HORIZONTAL SCROLL =================================== -->
+
+                         <!-- Horizontal Scroll Slide 1 -->
                         <div class="slides__slide page-1">
+                            
+                            <!-- Putting all the quotes onto a container so it is all in one place and it is on the same page -->
                             <div class="quote-container">
                                 <h2 class="quote1" id="quote1"> There was a Wolf Eel Fish named Wyatt. </h2> <br>
                                 <h2 class="quote2" id="quote2"> He is a very shy fish </h2> <br>
@@ -70,19 +77,14 @@
                                 <h2 class="quote6" id="quote6"> Scroll to continue...</h2>
 
                             </div>
+                            <!-- This button will allow the user to click and skip automaic quote animation -> done on js-->
                             <a id="btn2">Click Me</a>
-
-                            <!-- <a href="#page2" id="btn2">Next</a> -->
                         </div>
-
-                        <!-- <img src="images/bubb.png" class="bubble_pg1"> -->
-
-                        <!-- <img src="images/yellow-fish.png" class="yellow_fish"> -->
-                        <!-- <img src="images/wavy-wave.png" class="wavy-wave">  -->
+                        <!-- Background imagery -->
                         <img src="images/L1-wave.png" class="left-wave1">
-                        <!-- <img src="images/R1-wave.png" class="right-wave1"> -->
                         <img src="images/den2.png" class="den">
                         <img src="images/wyatt.png" class="wyatt">
+                        <!-- content of page 1 -->
                         <div class="content">
                             <!-- ==================== PAGE 2 =================================== -->
                             <section id="page2">
@@ -92,6 +94,8 @@
                                 <img src="images/bully-3.png" class="bully3">
                                 <img src="images/sad-wyatt.png" class="wyatt2">
                                 <img src="images/Herman-2.png" class="herman">
+
+                                <!-- just like page 1, creating a container for the bullying quotes -->
                                 <div class="bully-container">
                                     <h2 class="bully-quote1">Oh my god! What is that ugly fish?</h2>
                                     <h2 class="bully-quote2"> HAHAHA!</h2>
@@ -102,24 +106,25 @@
                             </section>
                         </div>
                     </div>
-
                 </div>
-
-
-
             </section>
 
 
             <!-- ==================== PAGE 3 =================================== -->
             <section id="page3">
+                <!-- A parallax for page 3 -->
                 <section class="parallax3">
-                    <!-- <section class="parallax3"> -->
-                    <div id="slide-pg3" class="slides__slide page-3">PAGE 3
+                    <!-- vertical scroll -->
+                    <div id="slide-pg3" class="slides__slide page-3">
                         <!-- background images -->
                         <img src="images/p3 bluey.png" class="blue-effect">
+                        <!-- a manipulation on a swim animation -> done on js-->
                         <div id="swim-animation">
+                            <!-- was going to create an actual swim animation done with code and imagery, however couldn't manage to do it
+                            so decided to create a gif done on procreate than adding it on here, still done on js for movement -->
                             <img src="images/w-swimming.gif" class="w-swimming">
                         </div>
+                        <!-- rest of the background images -->
                         <img src="images/p3 bubbles.png" class="p3-bubbles">
                         <img src="images/p3 water.png" class="p3-water">
                         <img src="images/underwater1.png" class="underwater">
@@ -135,13 +140,20 @@
                         <!-- ==================== PAGE 3 CHARACTERS =================================== -->
                     
                         <!-- MAN-O'WAR -->
+                        <!-- using a tooltip element, which is a hover name for characters, so each character has a tooltip class-->
+                        <!-- using a togglePopup for mini pop up contents for each character-> this is to link to js -->
+                        <!-- ALL tooltips are done on css only -->
                         <div class="tooltip-mow" onclick="toggleMOWPopup()">
+                            <!-- when img is hovered, the tooltip text will appear -> done on css -->
                             <img src="images/MOW1.png" alt="Hover Image" class="mow-hover">
                             <span class="text">portuguese <br>man o' war</span>
                         </div>
-
+                        <!-- a popup container for the mini pop up content to link to js -->
                         <div class="popup-container" id="popupContent-MOW">
+                            <!-- this will create a close button on the mini popup and enable close action linked on js -->
                             <button class="close-button" onclick="closeMOWPopup()">X</button>
+
+                            <!-- all contents within the mini pop up -->
                             <h2 class="popup-title">Portuguese Man O' War</h2> <br>
                             <div class="pop-img-container">
                                 <div id="popmow-img">
@@ -172,10 +184,10 @@
                             <img src="images/Sea Sheep.png" alt="Hover Image" class="seasheep-hover">
                             <span class="text">Sea Sheep</span>
                         </div>
-
+                        <!-- Mini Pop up  -->
                         <div class="popup-container" id="popupContent-Seasheep">
                             <button class="close-button" onclick="closeSeaSheepPopup()">X</button>
-                            <h2 class="popup-title">Sea Sheep or Leaf Sheep </h2> <br>
+                            <h2 class="popup-title">Sea Sheep or Leaf Sheep </h2> 
                             <h4 class="popup-scienceName">(Constasiella Kuroshimae)</h4>
                             <div class="pop-img-container">
                                 <div id="popseasheep-img">
@@ -209,7 +221,7 @@
                             <img src="images/Sea Bunny-Yellow.png" alt="Hover Image" class="seabunnyY-hover">
                             <span class="text">Sea Bunny</span>
                         </div>
-
+                            <!-- Mini Pop up  -->
                         <div class="popup-container" id="popupContent-Seabunny">
                             <button class="close-button" onclick="closeSeaBunnyPopup()">X</button>
                             <h2 class="popup-title">Sea Bunny</h2>
@@ -247,8 +259,7 @@
                             <img src="images/Flying Gurnard.png" alt="Hover Image" class="fgurnard-hover">
                             <span class="text">Flying Gurnard</span>
                         </div>
-
-
+                            <!-- Mini Pop up  -->
                         <div class="popup-container" id="popupContent-FGurnard">
                             <button class="close-button" onclick="closeFGurnardPopup()">X</button>
                             <h2 class="popup-title">Flying Gurnard</h2>
@@ -278,13 +289,15 @@
                     </div>
                 </div>
             </div>
+            <!-- An original plan on creating a magnifier from my own graphic and making it magnify and zoom images -->
+            <!-- This has failed on multiple attempts, but I have left this on here to demonstrate half of what has worked- making it draggable -->
             <div id="magnifier" class="magnifier" draggable="true">
                 <img src="images/magnifier.png" alt="Magnifier" class="magnifier-img">
                 <div class="magnifying-glass" id="magnifying-glass"></div>
             </div>
         </div>
      
-
+        <!-- These are tap icons to instruct users on what to do on the pages- automatically animates when no movement is detected-> done on js -->
                     <div class="tap">
                         <div id="tap-mow">
                             <img src="images/tap.png">
@@ -320,14 +333,14 @@
                 <div id="Twilight-zone">
                     <img src="images/zone1.png">
                 </div>
-                <!-- <img src="images/pg4-topL.png" class="pg4-topL">
-                <img src="images/pg4-topR.png" class="pg4-topR"> -->
+                <!-- CHARACTERS -->
 
+                <!-- Cockatoo Squid -->
                 <div class="tooltip-cSquid" onclick="toggleCSquidPopUp()">
                     <img src="images/Cockatoo-Squid1.png" alt="Hover Image" class="csquid-hover">
                     <span class="text">Cockatoo Squid</span>
                 </div>
-
+                <!-- Mini Pop up  -->
                 <div class="popup-container" id="popupContent-cSquid">
                     <button class="close-button" onclick="closeCSquidPopup()">X</button>
                     <h2 class="popup-title">Cockatoo Squid</h2>
@@ -361,11 +374,13 @@
                 </div>
                 </div>
                 </div>
+
+                <!-- Ox-Eyed Oreo-->
                 <div class="tooltip-oreo" onclick="toggleOreoPopUp()">
                     <img src="images/Ox-eyed Oreo.png" alt="Hover Image" class="oreo-hover">
                     <span class="text">Ox-Eyed Oreo</span>
                 </div>
-
+                    <!-- Mini Pop up  -->
                 <div class="popup-container" id="popupContent-Oreo">
                     <button class="close-button" onclick="closeOreoPopup()">X</button>
                     <h2 class="popup-title">Ox-Eyed Oreo</h2>
@@ -396,11 +411,12 @@
 
                 </div>
 
+                <!-- Sea Angel -->
                 <div class="tooltip-seaangel" onclick="toggleSeaAngelPopUp()">
                     <img src="images/seaangel1.png" alt="Hover Image" class="seaangel-hover">
                     <span class="text">Sea Angel</span>
                 </div>
-                
+                <!-- Mini Pop up  -->
                 <div class="popup-container" id="popupContent-SeaAngel">
                     <button class="close-button" onclick="closeSeaAngelPopup()">X</button>
                     <h2 class="popup-title">Sea Angel</h2>
@@ -431,11 +447,12 @@
                 </div>
                 </div>
 
+                <!-- Slender Snipe Eel -->
             <div class="tooltip-snipeeel" onclick="toggleSnipeEelPopUp()">
                 <img src="images/Slender Snipe Eel.png" alt="Hover Image" class="snipeeel-hover">
                 <span class="text">Slender Snipe Eel</span>
             </div>
-            
+            <!-- Mini Pop up  -->
             <div class="popup-container" id="popupContent-SnipeEel">
                 <button class="close-button" onclick="closeSnipeEelPopup()">X</button>
                 <h2 class="popup-title">Slender Snipe Eel</h2>
@@ -461,6 +478,7 @@
 
             </div>
             </div>
+            <!-- Narrative on Page 4 -->
             <div id="pg4-narrative">
                 <h2 id="pg4-narrative-text">
                     'Wow I didn't realise there's so many <br>other fish out there <br>that are different like me!'
@@ -477,18 +495,22 @@
         
         <!-- ==================== PAGE 5 =================================== -->
         <section class="section slide-pg5">
+            <!-- Logo title page -->
             <div id="Midight-zone">
                 <img src="images/zone2.png">
             </div>
+            <!-- Wyatt main character -->
                 <div id="wyatt-zone">
                     <img src="images/wyatt.png">
                 </div>
-                
+                <!-- Characters -->
+
+                <!-- Coelacanth -->
                 <div class="tooltip-coelacanth" onclick="toggleCoelacanthPopUp()">
                     <img src="images/Coelacanth.png" alt="Hover Image" class="coelacanth-hover">
                     <span class="text">Coelacanth</span>
                 </div>
-                
+                <!-- Mini Pop up  -->
                 <div class="popup-container" id="popupContent-Coelacanth">
                     <button class="close-button" onclick="closeCoelacanthPopup()">X</button>
                     <h2 class="popup-title">Coelacanth</h2>
@@ -519,11 +541,13 @@
                 
             </div>
         </div>
+
+        <!-- Giant Ostracod -->
         <div class="tooltip-ostracod" onclick="toggleOstracodPopUp()">
             <img src="images/Giant Ostracod.png" alt="Hover Image" class="ostracod-hover">
             <span class="text">Giant Ostracod</span>
         </div>
-        
+        <!-- Mini Pop up  -->
         <div class="popup-container" id="popupContent-Ostracod">
             <button class="close-button" onclick="closeOstracodPopup()">X</button>
             <h2 class="popup-title">Giant Ostracod</h2>
@@ -551,11 +575,14 @@
         
     </div>
 </div>
+
+<!-- Strawberry Squid / Jewel Squid -->
 <div class="tooltip-jsquid" onclick="toggleJSquidPopUp()">
     <img src="images/Jewel Squid.png" alt="Hover Image" class="jsquid-hover">
     <span class="text">Strawberry Squid </span>
 </div>
 
+<!-- Mini Pop up  -->
 <div class="popup-container" id="popupContent-JSquid">
     <button class="close-button" onclick="closeJSquidPopup()">X</button>
     <h2 class="popup-title">Strawberry Squid <br> or<br>Jewel Squid</h2>
@@ -584,8 +611,11 @@
     <p>Note: These do not taste of strawberries! </p>
 </div>
 </div>
+<!-- Add a sparkle image to create a sparkle effect animation using fade  -->
 <img src="images/Sparkle.png" class="sparkle" id="sparkleTooltipTrigger">
 </div>
+
+<!-- Mini Pop up for Siphonophore -->
 <div class="popup-container" id="popupContent-Siphon">
     <button class="close-button" onclick="closeSiphonophorePopup()">X</button>
     <h2 class="popup-title">Siphonophore</h2>
@@ -609,25 +639,23 @@
     the size of a blue whale!
 </div>
 
-
-
-<!-- <img src="images/Jewel Squid.png" class="j-squid">
-    <img src="images/Siphonophore.png" class="siphon">
-    <img src="images/Coelacanth.png" class="Coelacanth">  -->
 </section>
 
-<!-- <div class="slides__slide blue-100">Slide C</div>
-</div> -->
+
 
 <!-- ==================== PAGE 6 =================================== -->
+<!-- Back to horizontal scroll -->
 <section class="section section--horizontal">
     <div class="section__inner">
         <div id="slide-pg6" class="slides__slide page-6">
             <div class="slides">
+                <!-- Character -->
+                <!-- Siphonophore -> added on this page but it is located on page 5 and parts of page 6 (content on page 5)-->
                 <div class="tooltip-siphon" onclick="toggleSiphonophorePopUp()">
                     <img src="images/Siphonophore.png" alt="Hover Image" class="siphon-hover">
                     <span class="text">Siphonophore</span>
                 </div>
+                <!-- Adding a size chart img from the last pages on booklet -->
                 <div id="size-chart">
                     <img src="images/size-chart.jpeg">
                 </div>
@@ -637,13 +665,13 @@
                 <div id="ending">
                     <img src="images/ending-title.png">
                 </div>
-                
+                <!-- Herman character -->
                 <div id="herman-zone">
                     <img src="images/Herman-2.png" alt="Herman Image">
                 </div>
             </div>
         </div>
-        
+        <!-- Ending narration on last page -->
         <div id="ending-words">
             <h2>As you can see, Wyatt the Wolf Eel isn't the only one who looks differet.<br>
             Being a Special Kind is a special thing.<br><br>
